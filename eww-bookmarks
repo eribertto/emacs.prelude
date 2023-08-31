@@ -1,4 +1,6 @@
 ;; Auto-generated file; don't edit -*- mode: lisp-data -*-
+((:url "https://www.gnu.org/software/emacs/manual/html_mono/emacs.html#Saving-Emacs-Sessions" :title "GNU Emacs Manual" :time "Tue Aug 29 06:16:33 2023")
+ (:url "http://xahlee.info/emacs/emacs/practical_elisp.html" :title "Practical Emacs Lisp ⭐" :time "Sun Aug 27 21:01:05 2023")
 ((:url "https://karthinks.com/software/avy-can-do-anything/" :title "Avy can do anything | Karthinks" :time "Wed Aug 30 14:32:55 2023")
  (:url "https://ag91.github.io/blog/2022/04/20/repeat-with-me-avy-actions-are-awesome/" :title "Repeat with me: Avy actions are awesome! - Where parallels cross" :time "Wed Aug 30 14:14:19 2023"))
 ((:url "http://xahlee.info/emacs/emacs/practical_elisp.html" :title "Practical Emacs Lisp ⭐" :time "Sun Aug 27 21:01:05 2023"))
