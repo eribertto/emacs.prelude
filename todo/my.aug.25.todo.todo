@@ -1,16 +1,22 @@
-(("private" . [9 0 6 0]))
+(("private" . [10 0 11 0]))
 --==-- private
+[Aug 31, 2023] Plan to learn how to use denote note taking or org-roam
+[Aug 31, 2023] Plan to donate to Purcell's Prelude emacs, also to sub to emacs coaching protesilaos.com
+[Aug 31, 2023] Re learn ssh how to and target nuc EOS as server using rhinolinux and Mxlinux as clients
+[Aug 31, 2023] Setup emacs elfeed with various feeds such as emacs, linux, eos and rhinolinux OS for daily viewing
+[Aug 31, 2023] Reply to job solicitation of sonny.gallos naukigulf in erimendz inbox
 [Aug 30, 2023] Plan to place order for Bluetti home generator set
 [Aug 29, 2023] Plan to try eww to open youtube and play videos
 [Aug 29, 2023] Plan to switch to new branch and enable evil mode for experiment
-[Aug 28, 2023] Readup more of avy in karthinks website, also do practice of commands and functions
-[Aug 28, 2023] Learn navigation keys of eww browser, see emacswiki for guide also its bookmarking features
 [Aug 25, 2023] Checkout Prelude's google group https://groups.google.com/g/emacs-prelude
 [Aug 25, 2023] Create function to switch focus to help window and press q
-[Aug 25, 2023] copy personal module file from sample dir
-[Aug 25, 2023] note this branch is created to avoid the emacs startup error msg when prelude update is executed
 
 ==--== DONE 
+[DONE Aug 31, 2023] [Aug 25, 2023] note this branch is created to avoid the emacs startup error msg when prelude update is executed
+[DONE Aug 31, 2023] [Aug 25, 2023] copy personal module file from sample dir
+[DONE Aug 31, 2023] [Aug 28, 2023] Learn navigation keys of eww browser, see emacswiki for guide also its bookmarking features
+[DONE Aug 31, 2023] [Aug 28, 2023] Readup more of avy in karthinks website, also do practice of commands and functions
+[DONE Aug 31, 2023] [Aug 31, 2023] Make summary table of Haka payslips 2023 and upload it to Google drive
 [DONE Aug 30, 2023] [Aug 28, 2023] Plan to learn more of avy command 
 [DONE Aug 28, 2023] [Aug 25, 2023] Checkout Preludes gitter web channel, see if local client is available in yay https://app.gitter.im/#/room/#bbatsov_prelude:gitter.im
 [DONE Aug 26, 2023] [Aug 25, 2023] Readup Preludes online manual https://prelude.emacsredux.com/en/latest/installation/
