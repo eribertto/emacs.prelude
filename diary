@@ -24,3 +24,6 @@ Next steps:
 - Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
 - Enable sshd in this eos machine using systemctl command (DONE)
 - create ssh dir in client home folder, refer to ssh manual in pdf guide Linux administration (DONE)
+Sep 1, 2023
+- Hello this is the first diary entry from the new branch eribertto-nuc7i5bnh.
+- Add this commit to GH to register this new branch
