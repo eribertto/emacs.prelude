@@ -10,3 +10,16 @@ Aug 31, 2023
 Aug 31, 2023
 - Plan to install org-roam and follow some video tutorials as per this link https://www.youtube.com/results?search_query=org+roam
 
+Sep 1, 2023
+Successfully added ip entries of nuc server and mxlinux machines. Now they can speak to each other via ping.
+Next steps:
+- Get the public IP of each machine, both should be the same since they both use NAT using the same wifi network (DONE)
+- Create ssh config file of nuc server to contain entry of mxlinux and setup passwordless login. That way mxlinux can easily login/logout from the server.
+- From HUGRS office get the public ip of rhinolinux, record it and add this ip in the ssh config of this server.
+- From rhinolinux try ssh'ing to the public IP of nuc server e.g. 86.51.185.210
+- Watch ssh videos in Youtube e.g. Jay's linux channel and others [ongoing]
+- Also readup ssh topic in Linux admin books (see saved books in Gdrive) [ongoing]
+- Firewall add rule to allow remote connection from client side Mxlinux (DONE)
+- Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
+- Enable sshd in this eos machine using systemctl command (DONE)
+- create ssh dir in client home folder, refer to ssh manual in pdf guide Linux administration (DONE)
