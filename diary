@@ -18,6 +18,7 @@ Next steps:
 - From HUGRS office get the public ip of rhinolinux, record it and add this ip in the ssh config of this server.
 - From rhinolinux try ssh'ing to the public IP of nuc server e.g. 86.51.185.210
 - Watch ssh videos in Youtube e.g. Jay's linux channel and others [ongoing]
+- Here is the channel link https://www.youtube.com/watch?v=YS5Zh7KExvE&t=4691s
 - Also readup ssh topic in Linux admin books (see saved books in Gdrive) [ongoing]
 - Firewall add rule to allow remote connection from client side Mxlinux (DONE)
 - Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
