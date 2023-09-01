@@ -1,7 +1,26 @@
 Aug 31, 2023
-Begin diary entry in this Emacs machine.
-Today I  successfully resolved merge conflicts between develop and main branch in Github.
+- Begin diary entry in this Emacs machine.
+- Today I  successfully resolved merge conflicts between develop and main branch in Github.
 Now before doing the final merge i want to journal this steps first by noting them here.
 Note the develop branch is from the Rhino Linux machine I kept in the office. The commits made there are mostly todos and exercism elisp scripts I followed from the coding website.
-I have to consider that I am now in the aug25 branch. After I do the merge in Github, in the local machine I will switch to the main branch then pull the commits. After that I will switch back to aug25 branch then push all commits to Github and do a PR there with main branch and resolve any conflicts if any. Then do merge with main and from main create another (new) branch to start with, something like that idea. Take note to kill Emacs first just to be on the safe side.
+- I have to consider that I am now in the aug25 branch. After I do the merge in Github, in the local machine I will switch to the main branch then pull the commits. After that I will switch back to aug25 branch then push all commits to Github and do a PR there with main branch and resolve any conflicts if any. Then do merge with main and from main create another (new) branch to start with, something like that idea. Take note to kill Emacs first just to be on the safe side.
 
+Aug 31, 2023
+- FYI this entry is now from new branch aug31. So far so good.
+Aug 31, 2023
+- Plan to install org-roam and follow some video tutorials as per this link https://www.youtube.com/results?search_query=org+roam
+
+Sep 1, 2023
+Successfully added ip entries of nuc server and mxlinux machines. Now they can speak to each other via ping.
+Next steps:
+- Get the public IP of each machine, both should be the same since they both use NAT using the same wifi network (DONE)
+- Create ssh config file of nuc server to contain entry of mxlinux and setup passwordless login. That way mxlinux can easily login/logout from the server.
+- From HUGRS office get the public ip of rhinolinux, record it and add this ip in the ssh config of this server.
+- From rhinolinux try ssh'ing to the public IP of nuc server e.g. 86.51.185.210
+- Watch ssh videos in Youtube e.g. Jay's linux channel and others [ongoing]
+- Here is the channel link https://www.youtube.com/watch?v=YS5Zh7KExvE&t=4691s
+- Also readup ssh topic in Linux admin books (see saved books in Gdrive) [ongoing]
+- Firewall add rule to allow remote connection from client side Mxlinux (DONE)
+- Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
+- Enable sshd in this eos machine using systemctl command (DONE)
+- create ssh dir in client home folder, refer to ssh manual in pdf guide Linux administration (DONE)
