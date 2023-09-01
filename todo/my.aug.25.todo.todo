@@ -1,17 +1,23 @@
-(("private" . [10 0 6 0]))
+(("private" . [12 0 10 0]))
 --==-- private
-[Aug 31, 2023] This item is generated from new branch aug31
+[Aug 31, 2023] Use Mx tweak to change launcher layout to horizontal in Mx Linux
+[Aug 31, 2023] Plan to sub to emacs coaching service of Protesilaos https://protesilaos.com/coach/
+[Aug 31, 2023] Plan to give donation to Purcells Prelude emacs since I'm learning from his emacs distro product Prelude, education is priceless
+[Aug 31, 2023] Plan to reply to job invitation email of sonny from naukigulf, just try nothing to lose
 [Aug 30, 2023] Plan to place order for Bluetti home generator set
 [Aug 29, 2023] Plan to try eww to open youtube and play videos
-[Aug 29, 2023] Plan to switch to new branch and enable evil mode for experiment
 [Aug 28, 2023] Readup more of avy in karthinks website, also do practice of commands and functions
 [Aug 28, 2023] Learn navigation keys of eww browser, see emacswiki for guide also its bookmarking features
 [Aug 25, 2023] Checkout Prelude's google group https://groups.google.com/g/emacs-prelude
 [Aug 25, 2023] Create function to switch focus to help window and press q
-[Aug 25, 2023] copy personal module file from sample dir
+[Aug 29, 2023] Plan to switch to new branch and enable evil mode for experiment
 [Aug 25, 2023] note this branch is created to avoid the emacs startup error msg when prelude update is executed
 
 ==--== DONE 
+[DONE Sep 1, 2023] [Aug 25, 2023] copy personal module file from sample dir
+[DONE Sep 1, 2023] [Aug 31, 2023] This item is generated from new branch aug31
+[DONE Sep 1, 2023] [Aug 31, 2023] Plan to try out thefuck https://github.com/nvbn/thefuck
+[DONE Sep 1, 2023] [Aug 31, 2023] Plan to send money transfer to sjp bpi 58k for september budget e.g. 3K to nonoy balance to sjp
 [DONE Aug 30, 2023] [Aug 28, 2023] Plan to learn more of avy command 
 [DONE Aug 28, 2023] [Aug 25, 2023] Checkout Preludes gitter web channel, see if local client is available in yay https://app.gitter.im/#/room/#bbatsov_prelude:gitter.im
 [DONE Aug 26, 2023] [Aug 25, 2023] Readup Preludes online manual https://prelude.emacsredux.com/en/latest/installation/

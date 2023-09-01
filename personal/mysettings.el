@@ -4,3 +4,7 @@
 ;;;Make emacs always use its own browser for opening URLs
 (setq browse-url-browser-function 'eww-browse-url)
 (desktop-save-mode 1)
+;; try out emacs transparency as per EmacsWiki guide
+;; Fri 01 Sep 2023 04:38:27 AM +03
+(set-frame-parameter nil 'alpha-background 50)
+(add-to-list 'default-frame-alist '(alpha-background . 50))
