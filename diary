@@ -29,3 +29,7 @@ Sep 2, 2023
 - I will experiment deleting dash and dash-functional from package list packages and see what happens after a reboot
 - In the worst case just delete this branch and make another branch. This is a good learning exercise e.g. to make mistakes since mistake is the best teacher.
 - Save this commit first in magit
+Sep 2, 2023
+- FYI: dash, dash-functional packages are removed from this machine
+- Ping of nuc server from this machine is dead, unreachable
+- This is new diary from this machine.
