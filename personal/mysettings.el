@@ -15,7 +15,7 @@
 (require 'denote)
 ;; remember to check the doc string of those variables (those?)
 (setq denote-directory (expand-file-name "~/.emacs.d/notes")
-      denote-directory '("emacs" "linux" "technology" "weather" "news" "economics" "stocks")
+      denote-known-keywords'("emacs" "linux" "technology" "weather" "news" "economics" "stocks")
       denote-infer-keywords t
       denote-sort-keywords t
       denote-file-type nil
