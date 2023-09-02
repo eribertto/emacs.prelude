@@ -1,0 +1,6 @@
+#+title:      Denote second try
+#+date:       [2023-09-02 Sat 14:53]
+#+filetags:   :emacs:
+#+identifier: 20230902T145303
+Heres my second entry to denote
+I dont know what I'm doing lol :-)
