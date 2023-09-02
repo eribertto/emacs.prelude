@@ -1,0 +1,5 @@
+#+title:      Saturday  2 September 2023
+#+date:       [2023-09-02 Sat 15:06]
+#+filetags:   :journal:
+#+identifier: 20230902T150625
+Here's another denote journal with a nicer title e.g. human readable.
