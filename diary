@@ -24,3 +24,8 @@ Next steps:
 - Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
 - Enable sshd in this eos machine using systemctl command (DONE)
 - create ssh dir in client home folder, refer to ssh manual in pdf guide Linux administration (DONE)
+Sep 2, 2023
+- Heads up! This is first diary entry in branch rhino_sep2.2023 branch.
+- I will experiment deleting dash and dash-functional from package list packages and see what happens after a reboot
+- In the worst case just delete this branch and make another branch. This is a good learning exercise e.g. to make mistakes since mistake is the best teacher.
+- Save this commit first in magit
