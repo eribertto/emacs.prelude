@@ -8,3 +8,5 @@
 ;; Fri 01 Sep 2023 04:38:27 AM +03
 (set-frame-parameter nil 'alpha-background 50)
 (add-to-list 'default-frame-alist '(alpha-background . 50))
+;; quick fix for the warning error Package cl is deprecated
+(setq byte-compile-warnings '((not cl-functions)))
