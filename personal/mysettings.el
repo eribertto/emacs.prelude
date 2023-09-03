@@ -8,3 +8,12 @@
 ;; Fri 01 Sep 2023 04:38:27 AM +03
 (set-frame-parameter nil 'alpha-background 50)
 (add-to-list 'default-frame-alist '(alpha-background . 50))
+;; auto save hooks
+(add-hook 'diary-mode (lambda) (auto-save-visited-mode))
+(add-hook 'todo-mode (lambda) (auto-save-visited-mode))
+
+;; example snippet of determining major mode
+;; you can check the buffers major mode by doing M-x: major-mode <enter>
+(if (eq major-mode 'lisp-interaction-mode)
+    (message "Yes you are!")
+  (message "No you're not!"))
