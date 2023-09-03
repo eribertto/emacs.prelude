@@ -112,3 +112,9 @@ Else create a new file."
 ;; auto save hooks
 (add-hook 'diary-mode (lambda) (auto-save-visited-mode))
 (add-hook 'todo-mode (lambda) (auto-save-visited-mode))
+
+;; example snippet of determining major mode
+;; you can check the buffers major mode by doing M-x: major-mode <enter>
+(if (eq major-mode 'lisp-interaction-mode)
+    (message "Yes you are!")
+  (message "No you're not!"))
