@@ -108,3 +108,7 @@ Else create a new file."
 ;; context menu, use the following and then enable
 ;; `context-menu-mode'.
 (add-hook 'context-menu-functions #'denote-context-menu)
+
+;; auto save hooks
+(add-hook 'diary-mode (lambda) (auto-save-visited-mode))
+(add-hook 'todo-mode (lambda) (auto-save-visited-mode))
