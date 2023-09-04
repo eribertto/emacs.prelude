@@ -11,3 +11,7 @@
 ;; auto save hooks
 (add-hook 'diary-mode (lambda) (auto-save-visited-mode))
 (add-hook 'todo-mode (lambda) (auto-save-visited-mode))
+;; disable whitepace mode
+(setq prelude-clean-whitespace-on-save nil)
+(setq prelude-flyspell nil)
+
