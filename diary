@@ -24,3 +24,6 @@ Next steps:
 - Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
 - Enable sshd in this eos machine using systemctl command (DONE)
 - create ssh dir in client home folder, refer to ssh manual in pdf guide Linux administration (DONE)
+Sep 4, 2023
+- Add first diary entry in machine bibsmendz_TP460-eos
+- 
