@@ -122,3 +122,6 @@ Sep 4, 2023
 - Add diary entries in the evening session 
 - Plan to watch in tranches the emacs vids of Protesilaos in ~/Videos, mv all finished vids in ~/Videos/viewed.
 - Practice changing modes to avoid syntax highlighting
+- Consider trying out Regolith Linux in Debian 12 Bookworm https://regolith-desktop.com/docs/using-regolith/install/
+- Create a new user account in Mx Linux to try out this Regolith DE
+- Remember to use C-h m for major mode of buffer to know the commands for each key bindings
