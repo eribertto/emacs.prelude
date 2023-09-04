@@ -118,3 +118,7 @@ M-n		eww-next-bookmark
 M-p		eww-previous-bookmark
 
 Take note of the DLed emacs video tutorials of Prot in the ~/Videos folder
+Sep 4, 2023
+- Add diary entries in the evening session 
+- Plan to watch in tranches the emacs vids of Protesilaos in ~/Videos, mv all finished vids in ~/Videos/viewed.
+- Practice changing modes to avoid syntax highlighting
