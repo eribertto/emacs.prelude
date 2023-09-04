@@ -39,3 +39,82 @@ Sep 3, 2023
 (if (eq major-mode 'lisp-interaction-mode)
     (message "Yes you are!")
   (message "No you're not!"))
+Sep 4, 2023
+- Emacs packages worthy of trying out as mentioned in Protesilaos search and replace video
+ - wgrep https://github.com/mhayashi1120/Emacs-wgrep#summary
+ - consult 
+ - embark
+ - ef-themes
+- Protesilaos website for  github donor https://github.com/sponsors/protesilaos
+- Prots coaching website https://protesilaos.com/coach/
+- Preludes github donor https://github.com/sponsors/bbatsov
+- eww shortcuts https://www.emacswiki.org/emacs/eww
+ - You can see a list of keyboard bindings with `?’, but here are a few you might want:
+
+‘TAB’ - Next link
+Shift+TAB - Previous link
+‘b’ - Add bookmark
+‘B’ - View bookmarks
+‘d’ - Download link under point
+‘l’ - Go back
+‘r’ - Go forward
+‘H’ - View history
+‘g’ - reload the page
+‘G’ - Enter a new URL or search
+‘R’ - Attempt to improve readability
+‘w’ - Copy the current URL
+M-<RET> - Open link in new tab
+‘s’ - Get a list of eww tabs
+
+- See below more shortcuts as per Help buffer
+
+Mode for browsing the web.
+
+Key             Binding
+
+TAB		shr-next-link
+SPC		scroll-up-command
+&		eww-browse-with-external-browser
+-		negative-argument
+0 .. 9		digit-argument
+<		beginning-of-buffer
+>		end-of-buffer
+?		describe-mode
+B		eww-list-bookmarks
+C		url-cookie-list
+D		eww-toggle-paragraph-direction
+E		eww-set-character-encoding
+F		eww-toggle-fonts
+G		eww
+H		eww-list-histories
+R		eww-readable
+S		eww-list-buffers
+b		eww-add-bookmark
+d		eww-download
+g		eww-reload
+h		describe-mode
+l		eww-back-url
+n		eww-next-url
+p		eww-previous-url
+q		quit-window
+r		eww-forward-url
+s		eww-switch-to-buffer
+t		eww-top-url
+u		eww-up-url
+v		eww-view-source
+w		eww-copy-page-url
+DEL		scroll-down-command
+S-SPC		scroll-down-command
+<backtab>	shr-previous-link
+<delete>	scroll-down-command
+<mouse-8>	eww-back-url
+<mouse-9>	eww-forward-url
+
+C-M-i		shr-previous-link
+M-RET		eww-open-in-new-buffer
+M-C		eww-toggle-colors
+M-I		eww-toggle-images
+M-n		eww-next-bookmark
+M-p		eww-previous-bookmark
+
+
