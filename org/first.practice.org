@@ -1,0 +1,51 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+* This is a heading
+
+This is a paragraph
+
+This is a sentence with a *strong emphasis* like so
+This is an _underline_
+This is =verbatim text here=
+This is a proper ~function-name~ (code)
+Insert link here [[https:www.emacswiki.org][Emacswiki.org]]
+
+Unordered list
+- one
+- Meta-RET will continue the formatting of the previous line
+- Like so
+
+Numbered list
+
+1. buy grocery items
+   1. get milk powdered
+   2. get brown bread, peanut butter and jelly
+   3. anything else i miss
+2. go workout in the gym
+   1. do 3 sets of chest press 10 x 25 (reps x weight/kg)
+   2. do 3 sets of chin ups 5 x bw
+   3. do 2 sets of dumb bell squats 8 x 20
+3. pay meralco
+4. have dinner in the city
+5. whatever else
+
+* Another heading
+
+** Subheading (level 2) will allow the heading to fold the subhead like so
+
+*** C-<RET> will create another heading below the prior heading
+Note: M-<arrow> will indent the subheading to your levels of choice
+C-c C-, will show you menu of org priority blocks to insert
+#+begin_src emacs-lisp
+  (defun hello-world ()
+    (message "Hello emacs lisp world!"))
+#+end_src
+Note: M-x org-indent-mode will indent the whole buffer like this one now.
+
+* TODO This heading as progress list [2/2][100%]
+
+** DONE To mark each todo as done press C-c C-t to toggle their status. Tip: use the menu to aid you what commands to execute.
+CLOSED: [2023-09-05 Tue 21:29]
+** DONE Note: S-M-<RET> will create another todo heading
+CLOSED: [2023-09-05 Tue 21:30]
