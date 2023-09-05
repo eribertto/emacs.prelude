@@ -19,3 +19,9 @@
 ;; (if (eq major-mode 'lisp-interaction-mode)
 ;;     (message "Yes you are!")
 ;;   (message "No you're not!"))
+(blink-cursor-mode 1)
+(set-cursor-color 'yellow)
+
+
+(provide 'mysettings)
+;;; mysettings.el ends here

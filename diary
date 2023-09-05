@@ -125,3 +125,9 @@ Sep 4, 2023
 - Consider trying out Regolith Linux in Debian 12 Bookworm https://regolith-desktop.com/docs/using-regolith/install/
 - Create a new user account in Mx Linux to try out this Regolith DE
 - Remember to use C-h m for major mode of buffer to know the commands for each key bindings
+Sep 5, 2023
+- Remember to do M-x package-autoremove after each manual package update
+- Today I created ~/.emacs.d/personal/preload/my-prelude.custom.el to have my own custom theme
+- Do take note to *always* add a provide footer declaration to follow the coding convention of Prelude
+- Dont forget to add a closing comment mentioning the name of the file
+- Add blinking cursor and cursor color in mysettings config file
