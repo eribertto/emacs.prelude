@@ -20,7 +20,8 @@
 ;;     (message "Yes you are!")
 ;;   (message "No you're not!"))
 (blink-cursor-mode 1)
-(set-cursor-color 'yellow)
+;; todo: change the yellow argument (set-cursor-color 'yellow)
+(add-to-list 'default-frame-alist '(cursor-color . "yellow"))
 ;; disable whitepace mode
 (setq prelude-clean-whitespace-on-save nil)
 (setq prelude-flyspell nil)
