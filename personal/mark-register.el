@@ -43,3 +43,7 @@ that point."
 ;; register preview facility with its more informative presentation:
 (setq register-preview-delay 0.8
       register-preview-function #'consult-register-format)
+
+
+(provide 'mark-register)
+;;; mark-register.el ends here
