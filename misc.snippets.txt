@@ -1,0 +1,75 @@
+;; This buffer is for text that is saved for the users reference
+;; Tue 05 Sep 2023 02:42:44 PM +03
+
+(if (string= (system-name) "TP460-eos")
+    (message "yes")
+  (message "no"))
+
+;; interesting functions to get environment variables
+(system-name)
+(display-graphic-p)
+
+;; Emacs window movement management
+C-x 0    deletes the active window
+C-x 1    deletes other  windows
+C-x 2    split window below
+C-x 3    split window right
+C-x o    switch to active window (small oh)
+
+;; take note of M-x winner-mode, this remembers your window settings and lets you undo and redo with C-c <left> and C-c <right>
+;; to enable winner-mode, do M-x customize-option RET winner-mode RET
+;; Emacs will tile windows and generally ensure each new window is given roughly half the screen estate of the splitting window. 
+;; working with other windows
+C-x 4 C-f  finds a file in the other window
+C-x 4 d    opens M-x dired in the other window
+C-x 4 C-o  displays a buffer in the other window
+C-x 4 b    switches the buffer in the other window
+C-x 4 0    kills the buffer and window
+;; if you look closely at the table above, you will see a symmetry between C-x and C-x 4 e.g. they are almost identical in binding and purpose. This is no coincidence and the symmetry will help you remember the commands.
+
+;; Frame Management
+C-x 5 2  creates a frame
+C-x 5 b  switch buffer to other frame
+C-x 5 0  delete the active frame
+C-x 5 1  delete other frames
+C-x 5 C-f       Finds a file in the other window
+C-x 5 d  opens M-x dired in the other window
+C-x 5 C-o      Displays a buffer in the other window
+;; switching buffers with multiple frames is seamless, if a buffer is visible e.g. it is displayed in a window inside a frame. Emacs will switch to the right frame where the buffer is already visible.
+;; note: the usefulness of frames is limited by the already excellent tiling window management system in Emacs.
+;; Moving by line
+C-a       Moves point to the beginning of the lines
+C-e       Moves point to the end of the line
+M-m       Moves point to the first non-whitespace character of this line
+;; sub and super-word movement
+M-x subword-mode      Minor mode that treats CamelCase as distinct words
+M-x superword-mode      Minor mode that treats snake_case as one word
+
+;; Movement by symbolic expressions (sexp)
+Strings     Programming languages being the primary example of strings, which are balanced expressions because they begin and end with " or '.
+Brackets    In most major modes brackets are considered balanced as they have defined open and close characters e.g. [], (), {}, <>.
+
+;; the usefulness of these commands cannot be overstated, so it is absolutely vital that you learn how to use these commands.
+C-M-f       Move forward by sexp
+C-M-b       Move backward by sexp
+
+;; Down and Up list movement (not only for elisp but other languages as well)
+C-M-d       Move down into a list
+C-M-b       Move up out of a list
+C-M-k       Kill the balance expression where the cursor is
+;; Because C-M-d jumps into the next 'list' of sexp following the point, regardless of where it is in the buffer, it is a powerful tool for moving around as well. Like everything in Emacs, realizing the potential of a command and committing it to working memory so you use it is hard, but the reward is well worth it.
+;; Down and Up list movement
+C-M-n       Move forward to the next list
+C-M-p       Move backward to the previous list
+C-M-k       Kill the balance expression where the cursor is
+;; Moving by Paragraph
+M-}       (press Shift) Move forward to end of paragraph
+M-{       (press Shift) Move backward to start of paragraph
+;; note: the paragraph commands rely on a set of variables that define the beginning and end of a paragraph
+Variable name          Purpose
+paragraph-start        defines the beginning of a pragraph using a large regular expression
+paragraph-separate     defines the paragraph separator as a regular expression
+use-hard-lines         set by the command M-x use-hard-lines
+;; Moving by sentence
+M-a       Move to start of sentence
+M-e       Move to end of sentence
