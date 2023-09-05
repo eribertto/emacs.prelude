@@ -131,3 +131,5 @@ Sep 5, 2023
 - Do take note to *always* add a provide footer declaration to follow the coding convention of Prelude
 - Dont forget to add a closing comment mentioning the name of the file
 - Add blinking cursor and cursor color in mysettings config file
+- See this YT playlists of Protesilaos emacs https://www.youtube.com/playlist?list=PL8Bwba5vnQK14z96Gil86pLMDO2GnOhQ6
+- Consider using them as Emacs go to learning guides.
