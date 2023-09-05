@@ -21,7 +21,9 @@
 ;;   (message "No you're not!"))
 (blink-cursor-mode 1)
 (set-cursor-color 'yellow)
-
+;; disable whitepace mode
+(setq prelude-clean-whitespace-on-save nil)
+(setq prelude-flyspell nil)
 
 (provide 'mysettings)
 ;;; mysettings.el ends here

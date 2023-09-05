@@ -11,20 +11,6 @@ Aug 31, 2023
 - Plan to install org-roam and follow some video tutorials as per this link https://www.youtube.com/results?search_query=org+roam
 
 Sep 1, 2023
-Successfully added ip entries of nuc server and mxlinux machines. Now they can speak to each other via ping.
-Next steps:
-- Get the public IP of each machine, both should be the same since they both use NAT using the same wifi network (DONE)
-- Create ssh config file of nuc server to contain entry of mxlinux and setup passwordless login. That way mxlinux can easily login/logout from the server.
-- From HUGRS office get the public ip of rhinolinux, record it and add this ip in the ssh config of this server.
-- From rhinolinux try ssh'ing to the public IP of nuc server e.g. 86.51.185.210
-- Watch ssh videos in Youtube e.g. Jay's linux channel and others [ongoing]
-- Here is the channel link https://www.youtube.com/watch?v=YS5Zh7KExvE&t=4691s
-- Also readup ssh topic in Linux admin books (see saved books in Gdrive) [ongoing]
-- Firewall add rule to allow remote connection from client side Mxlinux (DONE)
-- Readup about ssh service in EndeavourOS if ready to use or needs further tweaking (DONE)
-- Enable sshd in this eos machine using systemctl command (DONE)
-- create ssh dir in client home folder, refer to ssh manual in pdf guide Linux administration (DONE)
-Sep 1, 2023
 - Hello this is the first diary entry from the new branch eribertto-nuc7i5bnh.
 - Add this commit to GH to register this new branch
 Sep 3, 2023
@@ -120,6 +106,7 @@ M-p		eww-previous-bookmark
 Take note of the DLed emacs video tutorials of Prot in the ~/Videos folder
 Sep 4, 2023
 - Add diary entries in the evening session 
+- Add first diary entry in machine bibsmendz_TP460-eos
 - Plan to watch in tranches the emacs vids of Protesilaos in ~/Videos, mv all finished vids in ~/Videos/viewed.
 - Practice changing modes to avoid syntax highlighting
 - Consider trying out Regolith Linux in Debian 12 Bookworm https://regolith-desktop.com/docs/using-regolith/install/
