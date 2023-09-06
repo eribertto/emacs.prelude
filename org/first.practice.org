@@ -1,0 +1,74 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+* This is a heading
+
+This is a paragraph
+
+This is a sentence with a *strong emphasis* like so
+This is an _underline_
+This is =verbatim text here=
+This is a proper ~function-name~ (code)
+Insert link here [[https:www.emacswiki.org][Emacswiki.org]]
+
+Unordered list
+- one
+- Meta-RET will continue the formatting of the previous line
+- Like so
+
+Numbered list
+
+1. buy grocery items
+   1. get milk powdered
+   2. get brown bread, peanut butter and jelly
+   3. anything else i miss
+2. go workout in the gym
+   1. do 3 sets of chest press 10 x 25 (reps x weight/kg)
+   2. do 3 sets of chin ups 5 x bw
+   3. do 2 sets of dumb bell squats 8 x 20
+3. pay meralco
+4. have dinner in the city
+5. whatever else
+
+* Another heading
+
+** Subheading (level 2) will allow the heading to fold the subhead like so
+
+*** C-<RET> will create another heading below the prior heading
+Note: M-<arrow> will indent the subheading to your levels of choice
+C-c C-, will show you menu of org priority blocks to insert
+#+begin_src emacs-lisp
+  (defun hello-world ()
+    (message "Hello emacs lisp world!"))
+#+end_src
+Note: M-x org-indent-mode will indent the whole buffer like this one now.
+
+* TODO This heading as progress list [2/2][100%]
+
+** DONE To mark each todo as done press C-c C-t to toggle their status. Tip: use the menu to aid you what commands to execute.
+CLOSED: [2023-09-05 Tue 21:29]
+** DONE Note: S-M-<RET> will create another todo heading
+CLOSED: [2023-09-05 Tue 21:30]
+
+* TODO Do LM with CTB. Note the time stamp created by C-c C-d [/] :private:sex:lm
+DEADLINE: <2023-09-08 Fri 20:00>
+
+** TODO Start working on my book (scheduled entry example) C-c C-s. Add deadline by hitting C-c C-d :book:project
+DEADLINE: <2023-10-25 Wed> SCHEDULED: <2023-09-25 Mon>
+
+** Note this variable for the location of agenda files
+
+#+begin_src emacs-lisp
+  (setq org-agenda-files '("location/of/this/file.org"))
+#+end_src
+
+** Note this command M-x org-agenda to get into the org-agenda menu
+
+** How to activate the agenda buffer and do the navigation?
+
+* To add tags to the todo entries add :tag-name next to the entry e.g.
+
+** TODO Followup asap the cancellation of the fucking BPI cards :bank:bpi:credit-cards
+DEADLINE: <2023-09-08 Fri>
+
+** Tip: avoid using priorities in the agenda to make your life simple. The more entries in your agenda the more chaotic it will become and this will demotivate you.
