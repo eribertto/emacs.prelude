@@ -49,3 +49,26 @@ Note: M-x org-indent-mode will indent the whole buffer like this one now.
 CLOSED: [2023-09-05 Tue 21:29]
 ** DONE Note: S-M-<RET> will create another todo heading
 CLOSED: [2023-09-05 Tue 21:30]
+
+* TODO Do LM with CTB. Note the time stamp created by C-c C-d [/] :private:sex:lm
+DEADLINE: <2023-09-08 Fri 20:00>
+
+** TODO Start working on my book (scheduled entry example) C-c C-s. Add deadline by hitting C-c C-d :book:project
+DEADLINE: <2023-10-25 Wed> SCHEDULED: <2023-09-25 Mon>
+
+** Note this variable for the location of agenda files
+
+#+begin_src emacs-lisp
+  (setq org-agenda-files '("location/of/this/file.org"))
+#+end_src
+
+** Note this command M-x org-agenda to get into the org-agenda menu
+
+** How to activate the agenda buffer and do the navigation?
+
+* To add tags to the todo entries add :tag-name next to the entry e.g.
+
+** TODO Followup asap the cancellation of the fucking BPI cards :bank:bpi:credit-cards
+DEADLINE: <2023-09-08 Fri>
+
+** Tip: avoid using priorities in the agenda to make your life simple. The more entries in your agenda the more chaotic it will become and this will demotivate you.

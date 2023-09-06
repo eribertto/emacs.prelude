@@ -120,3 +120,6 @@ Sep 5, 2023
 - Add blinking cursor and cursor color in mysettings config file
 - See this YT playlists of Protesilaos emacs https://www.youtube.com/playlist?list=PL8Bwba5vnQK14z96Gil86pLMDO2GnOhQ6
 - Consider using them as Emacs go to learning guides.
+Sep 6, 2023
+- See the notes and tips about org mode in the practice file ~/.emacs.d/org/first.practice.org
+- Plan to move away from this text mode diary and move to org-mode but check and tweak the default variables to match your liking
