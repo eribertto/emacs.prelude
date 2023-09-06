@@ -123,3 +123,33 @@ Sep 5, 2023
 Sep 6, 2023
 - See the notes and tips about org mode in the practice file ~/.emacs.d/org/first.practice.org
 - Plan to move away from this text mode diary and move to org-mode but check and tweak the default variables to match your liking
+- Plan to copy config files/settings from Magnars emacs config in the below location and add them to mysettings.el
+  
+  -rw-r--r-- 1 eriberttom eriberttom  3604 Aug  1 22:01 appearance.el
+  -rw-r--r-- 1 eriberttom eriberttom 14431 Aug  1 22:01 key-bindings.el
+  -rw-r--r-- 1 eriberttom eriberttom  1992 Aug  1 22:01 mac.el
+  -rw-r--r-- 1 eriberttom eriberttom  4077 Aug  1 22:01 mode-mappings.el
+  -rw-r--r-- 1 eriberttom eriberttom  2305 Aug  1 22:01 my-misc.el
+  -rw-r--r-- 1 eriberttom eriberttom  4392 Aug  1 22:01 sane-defaults.el
+  -rw-r--r-- 1 eriberttom eriberttom 19787 Aug  1 22:01 setup-clojure-mode.el
+  -rw-r--r-- 1 eriberttom eriberttom  1057 Aug  1 22:01 setup-dired.el
+  -rw-r--r-- 1 eriberttom eriberttom   412 Aug  1 22:01 setup-elnode.el
+  -rw-r--r-- 1 eriberttom eriberttom  2630 Aug  1 22:01 setup-ffip.el
+  -rw-r--r-- 1 eriberttom eriberttom  1111 Aug  1 22:01 setup-flycheck.el
+  -rw-r--r-- 1 eriberttom eriberttom  8221 Aug  1 22:01 setup-hippie.el
+  -rw-r--r-- 1 eriberttom eriberttom  2656 Aug  1 22:01 setup-html-mode.el
+  -rw-r--r-- 1 eriberttom eriberttom  2715 Aug  1 22:01 setup-ido.el
+  -rw-r--r-- 1 eriberttom eriberttom  9718 Aug  1 22:01 setup-js2-mode.el
+  -rw-r--r-- 1 eriberttom eriberttom  1625 Aug  1 22:01 setup-magit.el
+  -rw-r--r-- 1 eriberttom eriberttom   554 Aug  1 22:01 setup-markdown-mode.el
+  -rw-r--r-- 1 eriberttom eriberttom  1471 Aug  1 22:01 setup-org.el
+  -rw-r--r-- 1 eriberttom eriberttom  1088 Aug  1 22:01 setup-package.el
+  -rw-r--r-- 1 eriberttom eriberttom  3576 Aug  1 22:01 setup-paredit.el
+  -rw-r--r-- 1 eriberttom eriberttom   750 Aug  1 22:01 setup-perspective.el
+  -rw-r--r-- 1 eriberttom eriberttom  4347 Aug  1 22:01 setup-rgrep.el
+  -rw-r--r-- 1 eriberttom eriberttom   690 Aug  1 22:01 setup-ruby-mode.el
+  -rw-r--r-- 1 eriberttom eriberttom   875 Aug  1 22:01 setup-shell.el
+  -rw-r--r-- 1 eriberttom eriberttom   566 Aug  1 22:01 setup-skewer.el
+  -rw-r--r-- 1 eriberttom eriberttom  1294 Aug  1 22:01 setup-yasnippet.el
+
+- add new entries here as required
