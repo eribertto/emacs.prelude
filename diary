@@ -158,3 +158,4 @@ https://github.com/domtronn/all-the-icons.el
 https://github.com/jtbm37/all-the-icons-dired
 - Note: to toggle directory details in dired press ( also see more commands in the C-h m aka major mode
 - FYI: copied setup-dired.el from magnars repo to emacs personal folder
+- Success configuration of setup-dired.el after a restart e.g. folder view in dired is now simple NOT detailed
