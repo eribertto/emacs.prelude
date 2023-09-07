@@ -28,6 +28,7 @@
 (if (string= (system-name) "TP460-eos")
     (add-to-list 'default-frame-alist '(cursor-color . "green")))
 
+(turn-on-visual-line-mode)
 
 (provide 'mysettings)
 ;;; mysettings.el ends here
