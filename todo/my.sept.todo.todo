@@ -1,5 +1,6 @@
-(("private" . [10 0 31 0]))
+(("private" . [11 0 31 0]))
 --==-- private
+[Sep 7, 2023] Search for good org-mode configs to copy and apply in this prelude emacs
 [Sep 7, 2023] Update: this Bluetti purchase is ongoing e.g. paid the first down payment of 50K and the balance 56K to transfer next their account number BPI is 0231-0609-28 GoPrime Technology Corp
 [Sep 6, 2023] Plan to install Prots ef-theme to get some fancy looking themes  https://protesilaos.com/emacs/ef-themes#h:400d57a6-3a66-4ebf-b2e1-58a42237e0c2
 [Sep 6, 2023] Plan to add customization to org-mode since the default is sparse, find examples in Github magnars repo
