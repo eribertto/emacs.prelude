@@ -158,3 +158,6 @@ https://github.com/jtbm37/all-the-icons-dired
 - Note: to toggle directory details in dired press ( also see more commands in the C-h m aka major mode
 - FYI: copied setup-dired.el from magnars repo to emacs personal folder
 - Success configuration of setup-dired.el after a restart e.g. folder view in dired is now simple NOT detailed
+Sep 7, 2023
+- Add first entry from host machine branch TP460-eos. Installed all-the-icons and fonts as required.
+- Next to do setup org-mode config file to use for journaling and todos
