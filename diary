@@ -175,5 +175,9 @@ the ‘--debug-init’ option to view a complete error backtrace.
  ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-emacs-lisp.el: Error: Symbol's function definition is void sp-pair
  ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-js.el: Error: Symbol's function definition is void sp-pair
  ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-perl.el: Error: Symbol's function definition is void sp-pair
-=======
+
 - Success configuration of setup-dired.el after a restart e.g. folder view in dired is now simple NOT detailed
+Sep 9, 2023
+- Add first entry for this date in bibsmendz eos box
+- Setup popper package per this link https://github.com/karthink/popper
+- 

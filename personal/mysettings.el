@@ -28,14 +28,33 @@
 (if (string= (system-name) "TP460-eos")
     (add-to-list 'default-frame-alist '(cursor-color . "green")))
 
-(turn-on-visual-line-mode)
-(vertico-mode 1)
+(turn-on-visual-line-mode) ;; aka wrap long lines in screen
+;; already enabled in prelude-vertico.el
+;; (vertico-mode 1)
 
 ;; set font globally?
 ;; http://xahlee.info/emacs/emacs/emacs_list_and_set_font.html
 
 (when (member "FiraCode Nerd Font" (font-family-list))
   (set-frame-font "FiraCode Nerd Font-20" t t))
+
+;; setup popper
+;; https://github.com/karthink/popper
+(require 'popper)
+(setq popper-reference-buffers
+      '("\\*Messages\\*"
+        "Output\\*$"
+        "\\*Async Shell Command\\*"
+        help-mode
+        compilation-mode))
+(global-set-key (kbd "C-`") 'popper-toggle)
+(global-set-key (kbd "M-`") 'popper-cycle)
+(global-set-key (kbd "C-M-`") 'popper-toggle-type)
+(popper-mode +1)
+
+;; For echo-area hints
+(require 'popper-echo)
+(popper-echo-mode +1)
 
 (provide 'mysettings)
 ;;; mysettings.el ends here

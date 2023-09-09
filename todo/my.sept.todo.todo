@@ -1,10 +1,11 @@
-(("private" . [12 0 33 0]))
+(("private" . [13 0 34 0]))
 --==-- private
+[Sep 9, 2023] Do LBC tracking of Bluetti home generator set with AWBs 161864840701, 161864840936
+[Sep 9, 2023] popper.el is installed in bibsmendz TP460 machine, do the configuration
 [Sep 8, 2023] Plan to install popper.el to control diff frame/window buffers
 [Sep 8, 2023] Update: Plan to move funds from BPI/MBT to BDO and keep this account filled up WAS: Plan to top up bdo soa 40K before 20st of each month
 [Sep 8, 2023] Consider installing or trying out Hyperbole https://www.gnu.org/software/hyperbole/
 [Sep 7, 2023] Search for good org-mode configs to copy and apply in this prelude emacs
-[Sep 7, 2023] Update: this Bluetti purchase is done e.g. paid up now 106K from (50K and the balance 56K) to transfer next their account number BPI is 0231-0609-28 GoPrime Technology Corp
 [Sep 6, 2023] Plan to install Prots ef-theme to get some fancy looking themes  https://protesilaos.com/emacs/ef-themes#h:400d57a6-3a66-4ebf-b2e1-58a42237e0c2
 [Sep 6, 2023] Plan to add customization to org-mode since the default is sparse, find examples in Github magnars repo
 [Sep 4, 2023] Plan to watch philosophy episodes of Prots emacs video series, I like to learn philosophy
@@ -22,6 +23,7 @@
 [Sep 6, 2023] Plan to install Prots ef-themes https://protesilaos.com/emacs/ef-themes
 [Sep 6, 2023] Plan to add customization to org-mode since the default is sparse, find examples in Github magnars repo
 ==--== DONE 
+[DONE Sep 9, 2023] [Sep 7, 2023] Update: this Bluetti purchase is done e.g. paid up now 106K from (50K and the balance 56K) to transfer next their account number BPI is 0231-0609-28 GoPrime Technology Corp
 [DONE Sep 8, 2023] [Sep 8, 2023] Consider changing emacs to nativecomp from vanilla version, see yay emacs
 [DONE Sep 8, 2023] [Sep 5, 2023] Update 9/8/23: Success with the cancellation approval by calling their preferred PH number WAS: get bpi credit cards cancelled asap! Initial email notice was send to them this date
 [DONE Sep 7, 2023] [Sep 6, 2023] enable visual line mode to wrap long lines of text 
