@@ -31,14 +31,11 @@
 (turn-on-visual-line-mode)
 (vertico-mode 1)
 
-;; workaround???
-;; error: Keyword argument (sp-in-string-p) not one of
-;; (:trigger :trigger-wrap :actions :when :unless :pre-handlers :post-handlers :wrap :bind :insert :prefix :suffix :skip-match)
-;; https://list.orgmode.org/87tugzinxz.fsf@gmail.com/T/#u
-(defun org-native-comp-available-p ()
-  (and (fboundp 'native-comp-available-p)
-       (native-comp-available-p)))
+;; set font globally?
+;; http://xahlee.info/emacs/emacs/emacs_list_and_set_font.html
 
+(when (member "FiraCode Nerd Font" (font-family-list))
+  (set-frame-font "FiraCode Nerd Font-20" t t))
 
 (provide 'mysettings)
 ;;; mysettings.el ends here
