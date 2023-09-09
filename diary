@@ -162,3 +162,17 @@ https://github.com/jtbm37/all-the-icons-dired
 - Consider installing hyperbole, marginalia, vertico (installed) and enable them in your init file
 - Plan to record successful cancellation of bpi cards via phone call to their customer preferred hotline today 9/8
 - Consider recording the Bluetti PH generator order
+Sep 8, 2023 
+- See below error message after upgrading emacs to nativecomp
+ ■  Warning (initialization): An error occurred while loading ‘/home/eriberttom/.emacs.d/init.el’:
+
+error: Keyword argument (sp-in-string-p) not one of (:trigger :trigger-wrap :actions :when :unless :pre-handlers :post-handlers :wrap :bind :insert :prefix :suffix :skip-match)
+
+To ensure normal operation, you should investigate and remove the
+cause of the error in your initialization file.  Start Emacs with
+the ‘--debug-init’ option to view a complete error backtrace.
+ ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-c.el: Error: Symbol's function definition is void sp-pair
+ ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-lisp.el: Error: Symbol's function definition is void sp-pair
+ ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-emacs-lisp.el: Error: Symbol's function definition is void sp-pair
+ ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-js.el: Error: Symbol's function definition is void sp-pair
+ ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-perl.el: Error: Symbol's function definition is void sp-pair
