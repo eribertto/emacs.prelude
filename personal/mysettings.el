@@ -36,7 +36,7 @@
 ;; http://xahlee.info/emacs/emacs/emacs_list_and_set_font.html
 
 (when (member "FiraCode Nerd Font" (font-family-list))
-  (set-frame-font "FiraCode Nerd Font-20" t t))
+  (set-frame-font "FiraCode Nerd Font-22" t t))
 
 ;; setup popper
 ;; https://github.com/karthink/popper
