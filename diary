@@ -152,7 +152,6 @@ Sep 6, 2023
   -rw-r--r-- 1 eriberttom eriberttom   566 Aug  1 22:01 setup-skewer.el
   -rw-r--r-- 1 eriberttom eriberttom  1294 Aug  1 22:01 setup-yasnippet.el
 
-- add new entries here as required2
 - Done installing all-the-icons as per instruction in
 https://github.com/domtronn/all-the-icons.el
 https://github.com/jtbm37/all-the-icons-dired
@@ -163,7 +162,7 @@ https://github.com/jtbm37/all-the-icons-dired
 - Plan to record successful cancellation of bpi cards via phone call to their customer preferred hotline today 9/8
 - Consider recording the Bluetti PH generator order
 Sep 8, 2023 
-- See below error message after upgrading emacs to nativecomp
+- See below error message after upgrading emacs to nativecomp (eos/nuc machine)
  ■  Warning (initialization): An error occurred while loading ‘/home/eriberttom/.emacs.d/init.el’:
 
 error: Keyword argument (sp-in-string-p) not one of (:trigger :trigger-wrap :actions :when :unless :pre-handlers :post-handlers :wrap :bind :insert :prefix :suffix :skip-match)
@@ -176,3 +175,5 @@ the ‘--debug-init’ option to view a complete error backtrace.
  ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-emacs-lisp.el: Error: Symbol's function definition is void sp-pair
  ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-js.el: Error: Symbol's function definition is void sp-pair
  ■  Warning (comp): /home/eriberttom/.emacs.d/modules/prelude-perl.el: Error: Symbol's function definition is void sp-pair
+=======
+- Success configuration of setup-dired.el after a restart e.g. folder view in dired is now simple NOT detailed
