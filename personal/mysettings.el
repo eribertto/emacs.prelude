@@ -29,6 +29,16 @@
     (add-to-list 'default-frame-alist '(cursor-color . "green")))
 
 (turn-on-visual-line-mode)
+(vertico-mode 1)
+
+;; workaround???
+;; error: Keyword argument (sp-in-string-p) not one of
+;; (:trigger :trigger-wrap :actions :when :unless :pre-handlers :post-handlers :wrap :bind :insert :prefix :suffix :skip-match)
+;; https://list.orgmode.org/87tugzinxz.fsf@gmail.com/T/#u
+(defun org-native-comp-available-p ()
+  (and (fboundp 'native-comp-available-p)
+       (native-comp-available-p)))
+
 
 (provide 'mysettings)
 ;;; mysettings.el ends here
