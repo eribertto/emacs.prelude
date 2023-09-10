@@ -56,5 +56,9 @@
 (require 'popper-echo)
 (popper-echo-mode +1)
 
+;; workaround for json readtable error 47
+(when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize))
+
+
 (provide 'mysettings)
 ;;; mysettings.el ends here
