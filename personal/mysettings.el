@@ -60,6 +60,8 @@
 (when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize))
 
 ;; setup own org-capture templates
+;; note org-directory defaults to ~/.emacs.d/org
+;; global shortcut of org-capture in M-F6
 (setq org-default-notes-file (concat org-directory "/mynotes.org"))
 (setq org-capture-templates
       '(("t" "Tasks" entry

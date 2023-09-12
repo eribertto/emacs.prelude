@@ -1,0 +1,4 @@
+* Inbox
+** TODO Begin bank transfer tracking BPI to BDO via table (org-table) starting today.
+Note today first transfer was initiated this morning. Insert snapshot or email msg here.
+ [2023-09-12 Tue 13:51]

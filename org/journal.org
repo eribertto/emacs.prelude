@@ -5,3 +5,5 @@
 **** [2023-09-12 Tue 13:17]
 This is my first journal entry. Finally was able to make this entry
 after installing ipython and jupyter-notebook dependencies.
+**** [2023-09-12 Tue 13:37]
+Take note the org-capture capture abort json readtable error 47 is gone after installing ipython and jupyter python dependencies.
