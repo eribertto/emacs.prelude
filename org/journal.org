@@ -7,3 +7,29 @@ This is my first journal entry. Finally was able to make this entry
 after installing ipython and jupyter-notebook dependencies.
 **** [2023-09-12 Tue 13:37]
 Take note the org-capture capture abort json readtable error 47 is gone after installing ipython and jupyter python dependencies.
+**** [2023-09-12 Tue 14:24]
+
+# ;; Today i learned about the power of register e.g. select a region or anything and save it as
+# ;; see the above snippets from mysettings.el saved in a single register letter c
+# ;; a register aka just a single character.
+# ;; to view the register do M-x view-register
+
+
+;; setup own org-capture templates
+;; note org-directory defaults to ~/.emacs.d/org
+;; global shortcut of org-capture in M-F6
+
+(setq org-default-notes-file (concat org-directory "/mynotes.org"))
+(setq org-capture-templates
+      '(("t" "Tasks" entry
+         (file+headline "" "Inbox")
+         "* TODO %?\n %U")
+        ("c" "Phone Call" entry
+         (file+headline "" "Inbox")
+         "* TODO Call %?\n %U")
+        ("m" "Meeting" entry
+         (file+headline "" "Meetings")
+         "* %?\n %U")
+        ("j" "Journal Entry" entry
+         (file+datetree "journal.org")
+         "* %U\n%?")))

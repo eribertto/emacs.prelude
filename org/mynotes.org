@@ -2,3 +2,8 @@
 ** TODO Begin bank transfer tracking BPI to BDO via table (org-table) starting today.
 Note today first transfer was initiated this morning. Insert snapshot or email msg here.
  [2023-09-12 Tue 13:51]
+* Notes
+** Emacs 80 column rule, try to implement this in this machine
+Entered on [2023-09-12 Tue 17:10]
+ 
+ [[https://html.duckduckgo.com/html/?q=emacswiki+eighty+column][emacswiki eighty column at DuckDuckGo]]

@@ -67,9 +67,9 @@
       '(("t" "Tasks" entry
          (file+headline "" "Inbox")
          "* TODO %?\n %U")
-        ("c" "Phone Call" entry
-         (file+headline "" "Inbox")
-         "* TODO Call %?\n %U")
+        ("n" "Note" entry
+         (file+headline "" "Notes")
+         "* %?\nEntered on %U\n %i\n %a")
         ("m" "Meeting" entry
          (file+headline "" "Meetings")
          "* %?\n %U")
@@ -77,7 +77,14 @@
          (file+datetree "journal.org")
          "* %U\n%?")))
 
+;; function for line wrapping
+(defun setup-textorg-mode ()
+  (set-fill-column 80)
+  (column-number-mode 1)
+  (setq truncate-lines t))
 
+(add-hook 'text-mode-hook 'setup-textorg-mode)
+(add-hook 'org-mode-hook 'setup-textorg-mode)
 
 (provide 'mysettings)
 ;;; mysettings.el ends here
