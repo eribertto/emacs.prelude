@@ -59,6 +59,23 @@
 ;; workaround for json readtable error 47
 (when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize))
 
+;; setup own org-capture templates
+(setq org-default-notes-file (concat org-directory "/mynotes.org"))
+(setq org-capture-templates
+      '(("t" "Tasks" entry
+         (file+headline "" "Inbox")
+         "* TODO %?\n %U")
+        ("c" "Phone Call" entry
+         (file+headline "" "Inbox")
+         "* TODO Call %?\n %U")
+        ("m" "Meeting" entry
+         (file+headline "" "Meetings")
+         "* %?\n %U")
+        ("j" "Journal Entry" entry
+         (file+datetree "journal.org")
+         "* %U\n%?")))
+
+
 
 (provide 'mysettings)
 ;;; mysettings.el ends here

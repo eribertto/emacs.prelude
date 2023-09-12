@@ -1,0 +1,7 @@
+
+* 2023
+** 2023-09 September
+*** 2023-09-12 Tuesday
+**** [2023-09-12 Tue 13:17]
+This is my first journal entry. Finally was able to make this entry
+after installing ipython and jupyter-notebook dependencies.
