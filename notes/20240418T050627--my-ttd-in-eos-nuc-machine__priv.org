@@ -1,0 +1,26 @@
+#+title:      My TTD in EOS nuc machine
+#+date:       [2024-04-18 Thu 05:06]
+#+filetags:   :priv:
+#+identifier: 20240418T050627
+
+* Begin my TTD list in this machine.
+
+* FYI: sly mode seems to be working.
+** Resume learning Common Lisp Udemy course.
+* Install apps of choice:
+** wezterm, kitty
+** vorta backup client
+** DONE logseq
+CLOSED: [2024-04-18 Thu 05:19]
+
+** DONE zellij.
+** github-cli
+** git-it (learn this)
+* set up .gitconfig using gh client.
+* setup dotfiles for this box, get from github repos, setup bash aliases. see them in ~/downloads folder.
+* add more as needed.
+
+* Apps installed to date:
+** emacs and friends
+** ttf nerd fonts of choice
+** nix from determinate systems.

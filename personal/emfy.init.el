@@ -5,6 +5,8 @@
 ;;; Emfy 0.3.0 <https://github.com/susam/emfy>
 ;;; edited by user me April 13, 2024
 
+(server-start) ;; enable server mode.
+
 ;; Customize user interface.
 (when (display-graphic-p)
   (tool-bar-mode 1)
