@@ -1,0 +1,15 @@
+[user]
+	name = eriberttom_eos.kde.nuc
+	email = erimendz@gmail.com
+[core]
+	excludesFile = /home/eriberttom/.gitignore_global
+[pull]
+	rebase = true
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[push]
+	autoSetupRemote = true
