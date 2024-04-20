@@ -575,6 +575,9 @@
 (all-the-icons-completion-mode)
 (add-hook 'marginalia-mode-hook #'all-the-icons-completion-marginalia-setup)
 
+;; terminal emulator eat
+(use-package eat
+  :ensure t)
 
 (provide 'init)
 ;;; init.el ends here
