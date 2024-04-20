@@ -9,6 +9,7 @@
 ** TODO Resume learning Common Lisp Udemy course.
 ** TODO Learn Git-it
 ** TODO Learn nyxt cli browser.
+** Learn aka readup Magit info manual.
 * Install apps of choice:
 ** wezterm, kitty
 ** vorta backup client
