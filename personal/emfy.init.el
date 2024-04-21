@@ -1,4 +1,4 @@
-;;; init.el --- Configure default init file -*- lexical-binding: t -*-
+;;; emfy.init.el --- Configure default init file -*- lexical-binding: t -*-
 ;;; Commentary: see Emfy below
 ;;; Code:
 
@@ -358,6 +358,7 @@
 (use-package sly
   :ensure t)
 
+;; copied from the Sly manual.
 (eval-after-load 'sly
   `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
 
@@ -581,5 +582,7 @@
 (use-package eat
   :ensure t)
 
-(provide 'init)
-;;; init.el ends here
+
+
+(provide 'emfy.init)
+;;; emfy.init.el ends here
