@@ -1,0 +1,85 @@
+  ace-window                     20220911.358   installed             Quickly switch windows.
+  ag                             20201031.2202  installed             A front-end for ag ('the silver searcher'), the C ack replacement.
+  all-the-icons                  20240108.559   installed             A library for inserting Developer icons
+  all-the-icons-completion       20240128.2048  installed             Add icons to completion candidates
+  all-the-icons-dired            20231207.1324  installed             Shows icons for each file in dired mode
+  all-the-icons-gnus             20180511.654   installed             Shows icons for in Gnus
+  all-the-icons-ibuffer          20230503.1625  installed             Display icons for all buffers in ibuffer
+  all-the-icons-ivy              20190508.1803  installed             Shows icons while using ivy and counsel
+  all-the-icons-ivy-rich         20230420.1234  installed             Better experience with icons for ivy
+  all-the-icons-nerd-fonts       20240210.1127  installed             Nerd font integration for all-the-icons
+  anzu                           20240202.447   installed             Show number of matches in mode-line while searching
+  browse-kill-ring               20231104.1450  installed             interactively insert items from kill-ring
+  company                        20240311.1943  installed             Modular text completion framework
+  consult                        20240323.808   installed             Consulting completing-read
+  crux                           20240229.957   installed             A Collection of Ridiculously Useful eXtensions
+  deadgrep                       20231130.1628  installed             fast, friendly searching with ripgrep
+  denote                         2.2.4          installed             Simple notes with an efficient file-naming scheme
+  denote-refs                    0.1.2          installed             Show links and backlinks in Denote notes
+  diff-hl                        20240225.116   installed             Highlight uncommitted changes using VC
+  diminish                       20220909.847   installed             Diminished modes are minor modes with no modeline display
+  dired-sidebar                  20240320.1952  installed             Tree browser leveraging dired
+  discover-my-major              20180606.511   installed             Discover key bindings and their meaning for the current Emacs major mode
+  easy-kill                      20220511.557   installed             kill & mark things easily
+  editorconfig                   20240318.2049  installed             EditorConfig Emacs Plugin
+  ef-themes                      1.6.1          installed             Colorful and legible themes
+  elfeed                         20221108.755   installed             an Emacs Atom/RSS feed reader
+  elfeed-autotag                 20210607.637   installed             Easy auto-tagging for elfeed
+  elfeed-curate                  20231119.32    installed             Elfeed entry curation
+  elfeed-dashboard               20210727.603   installed             An extensible frontend for elfeed using org-mode
+  elfeed-goodies                 20221003.1406  installed             Elfeed goodies
+  elfeed-org                     20231009.1125  installed             Configure elfeed with one or more org-mode files
+  elfeed-protocol                20231007.1535  installed             Provide fever/newsblur/owncloud/ttrss protocols for elfeed
+  elfeed-score                   20230728.1433  installed             Gnus-style scoring for Elfeed
+  elfeed-summary                 20231231.1456  installed             Feed summary interface for elfeed
+  elfeed-tube                    20240123.1825  installed             YouTube integration for Elfeed
+  elfeed-tube-mpv                20230607.717   installed             Control mpv from Elfeed
+  elfeed-web                     20210226.258   installed             web interface to Elfeed
+  elfeed-webkit                  20230604.2111  installed             Render elfeed entries in embedded webkit widgets
+  elisp-slime-nav                20210510.528   installed             Make M-. and M-, work in elisp like they do in slime
+  epl                            20180205.2049  installed             Emacs Package Library
+  exec-path-from-shell           20240216.1606  installed             Get environment variables such as $PATH from the shell
+  expand-region                  20240119.1039  installed             Increase selected region by semantic units.
+  flycheck                       20240317.606   installed             On-the-fly syntax checking
+  gist                           20171128.406   installed             Emacs integration for gist.github.com
+  git-modes                      20240101.2217  installed             Major modes for editing Git configuration files
+  git-timemachine                20240309.1109  installed             Walk through git revisions of a file
+  guru-mode                      20211025.1157  installed             Become an Emacs guru
+  hl-todo                        20240101.2217  installed             Highlight TODO and similar keywords
+  imenu-anywhere                 20210201.1704  installed             ido/ivy/helm imenu across same mode/project/etc buffers
+  js2-mode                       20240310.1755  installed             Improved JavaScript editing mode
+  json-mode                      20240228.1443  installed             Major mode for editing JSON files
+  lsp-mode                       20240320.1716  installed             LSP mode
+  lsp-ui                         20230811.552   installed             UI modules for lsp-mode
+  lua-mode                       20231023.947   installed             a major-mode for editing Lua scripts
+  magit                          20240320.2336  installed             A Git porcelain inside Emacs.
+  move-text                      20231204.1514  installed             Move current line or region with M-up or M-down.
+  nlinum                         1.9            installed             Show line numbers in the margin
+  operate-on-number              20231114.1921  installed             Operate on number at point with arithmetic functions
+  orderless                      20240320.1638  installed             Completion style for matching regexps in any order
+  org-modern                     20240316.1109  installed             Modern looks for Org
+  org-pdftools                   20220320.301   installed             Support for links to documents in pdfview mode
+  org-side-tree                  20240130.656   installed             Navigate Org outlines in side window tree
+  org-sidebar                    20240102.9     installed             Helpful sidebar for Org buffers
+  org-superstar                  20230116.1358  installed             Prettify headings and plain lists in Org mode
+  org-web-tools                  20231220.1515  installed             Display and capture web content with Org-mode
+  pdf-tools                      20240317.848   installed             Support library for PDF documents
+  popper                         20230909.56    installed             Summon and dismiss buffers as popups
+  projectile                     20240212.1100  installed             Manage and navigate projects in Emacs easily
+  rainbow-delimiters             20210515.1254  installed             Highlight brackets according to their depth
+  rainbow-mode                   1.0.6          installed             Colorize color names in buffers
+  smartparens                    20240320.1247  installed             Automatic insertion, wrapping and paredit-like navigation with user defined pairs.
+  smartrep                       20150509.230   installed             Support sequential operation which omitted prefix keys.
+  solarized-theme                20231204.713   installed             The Solarized color theme
+  super-save                     20231209.1044  installed             Auto-save buffers, based on your activity.
+  treemacs-all-the-icons         20240131.2042  installed             all-the-icons integration for treemacs
+  undo-tree                      0.8.2          installed             Treat undo history as a tree
+  vertico                        20240128.1526  installed             VERTical Interactive COmpletion
+  volatile-highlights            20230301.1402  installed             Minor mode for visual feedback on some operations.
+  web-mode                       20240315.1838  installed             major mode for editing web templates
+  wgrep-deadgrep                 20231215.1145  installed             Writable deadgrep buffer and apply the changes to files
+  which-key                      20240312.2033  installed             Display available keybindings in popup
+  xah-fly-keys                   24.23.20240321233250 installed             ergonomic modal keybinding minor mode.
+  yaml-mode                      20240317.1602  installed             Major mode for editing YAML files
+  zenburn-theme                  20231120.2002  installed             A low contrast color theme for Emacs.
+  zop-to-char                    20160212.1554  installed             A replacement of zap-to-char.

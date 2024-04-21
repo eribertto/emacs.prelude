@@ -1,0 +1,83 @@
+82 matches for "kitty_mod" in buffer: kitty.conf<2>
+   1733:#:     map kitty_mod+space no_op
+   1739:#:     map kitty_mod+f1 discard_event
+   1748:#:     map kitty_mod+e combine : new_window : next_layout
+   1764:# kitty_mod ctrl+shift
+   1768:#: kitty_mod.
+   1807:# map kitty_mod+c copy_to_clipboard
+   1818:# map kitty_mod+v paste_from_clipboard
+   1823:# map kitty_mod+s  paste_from_selection
+   1828:# map kitty_mod+o pass_selection_to_program
+   1836:#::      map kitty_mod+o pass_selection_to_program firefox
+   1841:#::      map kitty_mod+y new_window less @selection
+   1849:# map kitty_mod+up    scroll_line_up
+   1850:# map kitty_mod+k     scroll_line_up
+   1856:# map kitty_mod+down    scroll_line_down
+   1857:# map kitty_mod+j       scroll_line_down
+   1863:# map kitty_mod+page_up scroll_page_up
+   1868:# map kitty_mod+page_down scroll_page_down
+   1873:# map kitty_mod+home scroll_home
+   1878:# map kitty_mod+end scroll_end
+   1883:# map kitty_mod+z scroll_to_prompt -1
+   1892:# map kitty_mod+x scroll_to_prompt 1
+   1896:# map kitty_mod+h show_scrollback
+   1910:# map kitty_mod+g show_last_command_output
+   1941:# map kitty_mod+enter new_window
+   1947:#::      map kitty_mod+y launch mutt
+   1972:# map kitty_mod+n new_os_window
+   1981:# map kitty_mod+w close_window
+   1986:# map kitty_mod+] next_window
+   1990:# map kitty_mod+[ previous_window
+   1994:# map kitty_mod+f move_window_forward
+   1998:# map kitty_mod+b move_window_backward
+   2002:# map kitty_mod+` move_window_to_top
+   2006:# map kitty_mod+r start_resizing_window
+   2011:# map kitty_mod+1 first_window
+   2016:# map kitty_mod+2 second_window
+   2021:# map kitty_mod+3 third_window
+   2026:# map kitty_mod+4 fourth_window
+   2031:# map kitty_mod+5 fifth_window
+   2036:# map kitty_mod+6 sixth_window
+   2041:# map kitty_mod+7 seventh_window
+   2046:# map kitty_mod+8 eighth_window
+   2051:# map kitty_mod+9 ninth_window
+   2056:# map kitty_mod+0 tenth_window
+   2060:# map kitty_mod+f7 focus_visible_window
+   2070:# map kitty_mod+f8 swap_with_window
+   2080:# map kitty_mod+right next_tab
+   2086:# map kitty_mod+left previous_tab
+   2092:# map kitty_mod+t new_tab
+   2097:# map kitty_mod+q close_tab
+   2106:# map kitty_mod+. move_tab_forward
+   2110:# map kitty_mod+, move_tab_backward
+   2114:# map kitty_mod+alt+t set_tab_title
+   2137:# map kitty_mod+l next_layout
+   2164:# map kitty_mod+equal  change_font_size all +2.0
+   2165:# map kitty_mod+plus   change_font_size all +2.0
+   2166:# map kitty_mod+kp_add change_font_size all +2.0
+   2173:# map kitty_mod+minus       change_font_size all -2.0
+   2174:# map kitty_mod+kp_subtract change_font_size all -2.0
+   2180:# map kitty_mod+backspace change_font_size all 0
+   2186:#:     map kitty_mod+f6 change_font_size all 10.0
+   2191:#:     map kitty_mod+f6 change_font_size current 10.0
+   2202:# map kitty_mod+e open_url_with_hints
+   2209:# map kitty_mod+p>f kitten hints --type path --program -
+   2217:# map kitty_mod+p>shift+f kitten hints --type path
+   2223:# map kitty_mod+p>l kitten hints --type line --program -
+   2230:# map kitty_mod+p>w kitten hints --type word --program -
+   2236:# map kitty_mod+p>h kitten hints --type hash --program -
+   2244:# map kitty_mod+p>n kitten hints --type linenum
+   2251:# map kitty_mod+p>y kitten hints --type hyperlink
+   2266:# map kitty_mod+f1 show_kitty_doc overview
+   2270:# map kitty_mod+f11 toggle_fullscreen
+   2275:# map kitty_mod+f10 toggle_maximized
+   2283:# map kitty_mod+u    kitten unicode_input
+   2288:# map kitty_mod+f2 edit_config_file
+   2293:# map kitty_mod+escape kitty_shell window
+   2300:# map kitty_mod+a>m set_background_opacity +0.1
+   2304:# map kitty_mod+a>l set_background_opacity -0.1
+   2308:# map kitty_mod+a>1 set_background_opacity 1
+   2312:# map kitty_mod+a>d set_background_opacity default
+   2316:# map kitty_mod+delete clear_terminal reset active
+   2374:# map kitty_mod+f5 load_config_file
+   2391:# map kitty_mod+f6 debug_config

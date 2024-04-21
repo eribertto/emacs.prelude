@@ -1,0 +1,12 @@
+#+title:      TTD T460 machine
+#+date:       [2024-03-13 Wed 15:07]
+#+filetags:   :emacs:
+#+identifier: 20240313T150707
+
+* Begin my things to do in this box
+* How to change remote repo to point to my github purcells repo?
+* Install other apps of choice in this box
+* Install anything that comes to mind.
+* Install org-super-agenda and setup in this machine.
+* DONE Setup gh-cli in this box then .gitconfig copy from purcells repo
+CLOSED: [2024-03-13 Wed 16:33]
