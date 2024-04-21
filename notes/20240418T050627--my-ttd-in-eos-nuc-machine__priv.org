@@ -10,6 +10,8 @@
 ** TODO Learn Git-it
 ** TODO Learn nyxt cli browser.
 ** Learn aka readup Magit info manual.
+** DONE Install quicklisp script per this link https://github.com/susam/emacs4cl?tab=readme-ov-file#get-started
+CLOSED: [2024-04-20 Sat 21:42]
 * Install apps of choice:
 ** wezterm, kitty
 ** vorta backup client

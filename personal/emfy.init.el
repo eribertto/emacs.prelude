@@ -6,6 +6,8 @@
 ;;; edited by user me April 13, 2024
 
 (server-start) ;; enable server mode.
+(unless (server-running-p)
+  (server-start))
 
 ;; Customize user interface.
 (when (display-graphic-p)
