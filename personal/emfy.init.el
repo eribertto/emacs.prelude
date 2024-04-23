@@ -1,9 +1,20 @@
-;;; init.el --- Configure default init file -*- lexical-binding: t -*-
+;;; emfy.init.el --- Configure default init file -*- lexical-binding: t -*-
 ;;; Commentary: see Emfy below
 ;;; Code:
 
 ;;; Emfy 0.3.0 <https://github.com/susam/emfy>
 ;;; edited by user me April 13, 2024
+
+(require 'desktop)
+(desktop-save-mode 1)
+(defun my-desktop-save ()
+  "Don't prompt desktop-save-in-desktop-dir."
+  (interactive)
+  (if (eq (desktop-owner) (emacs-pid))
+      (desktop-save desktop-dirname))
+  )
+(add-hook 'auto-save-hook 'my-desktop-save)
+
 
 ;; Customize user interface.
 (when (display-graphic-p)
@@ -66,7 +77,7 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia eglot savehist vertico orderless corfu magit org-superstar))
+(dolist (package '(markdown-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia eat eglot savehist vertico orderless corfu magit org-superstar))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -276,10 +287,10 @@
 (mapc #'disable-theme custom-enabled-themes)
 
 ;; Load the theme of choice:
-(load-theme 'ef-winter :no-confirm)
+;; (load-theme 'ef-cherie :no-confirm)
 
 ;; OR use this to load the theme which also calls `ef-themes-post-load-hook':
-;; (ef-themes-select 'ef-summer)
+(ef-themes-select 'ef-cherie)
 
 ;; The themes we provide are recorded in the `ef-themes-dark-themes',
 ;; `ef-themes-light-themes'.
@@ -573,6 +584,9 @@
 (all-the-icons-completion-mode)
 (add-hook 'marginalia-mode-hook #'all-the-icons-completion-marginalia-setup)
 
+;; eat terminal emulator
+(use-package eat
+  :ensure t)
 
-(provide 'init)
-;;; init.el ends here
+(provide 'emfy.init)
+;;; emfy.init.el ends here
