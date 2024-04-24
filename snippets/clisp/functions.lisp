@@ -1,5 +1,19 @@
-;; This buffer is for text that is not saved, and for Lisp evaluation.
-;; To create a file, visit it with C-o and enter text in its buffer.
+;; All about functions
+;; To create a new function use the keyword defun
+;; (require :asdf)
+(setf pub '(John Q Public)) ; => (JOHN Q PUBLIC)
+                                        ; => (JOHN Q PUBLIC)
+
+(defun last-name (name)
+  "Select the last name from the list object argument name."
+  (first (last name)))
+
+(last-name pub)
+
+
+
+
+
 ;; Lisp variables
 (setf p '(John Q Public)) ; => (JOHN Q PUBLIC)
 (princ p); (JOHN Q PUBLIC) => (JOHN Q PUBLIC)

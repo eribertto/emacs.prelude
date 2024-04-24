@@ -77,7 +77,7 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia eat eglot savehist vertico orderless corfu magit org-superstar))
+(dolist (package '(markdown-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia sly sly-asdf sly-quicklisp eat eglot savehist vertico orderless corfu magit org-superstar))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -356,17 +356,27 @@
                                (or (server-running-p)
                                    (server-start))))
 
-(add-to-list 'exec-path "/usr/bin")
-(setq inferior-lisp-program "sbcl")
 
+;; sly/slime sbcl section
 ;; install sly https://github.com/joaotavora/sly
 ;; https://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
-
 (use-package sly
   :ensure t)
 
+(require 'sly-autoloads)
+(add-hook 'sly-mode-hook
+          (lambda ()
+            (unless (sly-connected-p)
+              (save-excursion (sly)))))
 (eval-after-load 'sly
   `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
+
+;; Set your lisp system and some contribs
+(add-to-list 'exec-path "~/.nix-profile/bin/") ; nixos system
+(setq inferior-lisp-program "sbcl")
+(setq sly-contribs '(sly-asdf sly-quicklisp))
+
+
 
 ;; Enable vertico
 (use-package vertico
