@@ -77,9 +77,12 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia sly sly-asdf sly-quicklisp eat eglot savehist vertico orderless corfu magit org-superstar))
+(dolist (package '(markdown-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia sly  eat eglot savehist vertico orderless corfu magit org-superstar))
   (unless (package-installed-p package)
     (package-install package)))
+
+;; sly-asdf sly-quicklisp ;; exclude this from the dolist, for now
+
 
 ;; Enable Paredit.
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
