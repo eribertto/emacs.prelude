@@ -362,8 +362,8 @@
 ;; https://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
 (use-package sly
   :ensure t)
-
-(require 'sly-autoloads)
+(add-to-list 'exec-path "~/.nix-profile/bin/") ; nixos system
+(setq inferior-lisp-program "sbcl")
 (add-hook 'sly-mode-hook
           (lambda ()
             (unless (sly-connected-p)
@@ -372,9 +372,8 @@
   `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
 
 ;; Set your lisp system and some contribs
-(add-to-list 'exec-path "~/.nix-profile/bin/") ; nixos system
-(setq inferior-lisp-program "sbcl")
-(setq sly-contribs '(sly-asdf sly-quicklisp))
+;; (require 'sly-autoloads)
+;; (setq sly-contribs '(sly-asdf sly-quicklisp))
 
 
 
