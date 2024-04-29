@@ -40,77 +40,10 @@
 
 (fit-frame-to-buffer)
 (menu-bar-mode 1)
-;; (auto-save-visited-mode)
-;;(tab-bar-mode 1)
-;; (desktop-save-mode 1)
-;; Show the tab-bar as soon as tab-bar functions are invoked
-;; (setopt tab-bar-show 1)
 (setq tab-bar-tab-hints 1)
 (setq tab-bar-close-button-show t)
 (setq fill-column 100) ;; ditch the default 70, we're 2023 now.
 
-;; from emacswiki
-;; (add-to-list 'default-frame-alist '(height . 36))
-;; (add-to-list 'default-frame-alist '(width . 100))
-
-
-;; set default font
-;; (cond
-;;  ((eq system-type 'windows-nt)
-;;   (when (member "Consolas" (font-family-list))
-;;     (set-frame-font "Consolas" t t)))
-;;  ((eq system-type 'darwin)              ; macOS
-;;   (when (member "Menlo" (font-family-list))
-;;     (set-frame-font "Menlo" t t)))
-;;  ((eq system-type 'gnu/linux)
-;;   (when (member "Hack" (font-family-list))
-;;     (set-frame-font "Hack-26" t t)
-;;     (load-theme 'modus-vivendi-tinted t))))
-
-;; begin customization of xah fly keys
-;; add global toggle key command/insert mode
-;; note F4 is taken so use F5 instead
-
-;; (global-set-key (kbd "<f5>") 'xah-fly-mode-toggle) ; this works
-
-;; add a key to insert mode to activate command mode sort of jk escape in vim
-;; note the term 'a key' meaning only one key char
-;; use target key \ aka forward slash but
-;; note to use this literal char (in insert mode) hit C-q first
-
-;; this doesnt work in insert mode
-;; (define-key xah-fly-insert-map (kbd "\\") 'xah-fly-command-mode-activate)
-;; insert by doing C-q first then the character \  (in insert mode)
-
-;; modeline colors and icons
-;; EndeavourOS = " "
-;; (setq xah-fly-command-mode-indicator " ")
-;; (setq xah-fly-insert-mode-indicator "✏" )
-;; (defun my-modeline-color-on ()
-;;   "Make mode-line color blue."
-;;   (set-face-background 'mode-line "blue"))
-;; (defun my-modeline-color-off ()
-;;   "Make mode-line color firebrick."
-;;   (set-face-background 'mode-line "firebrick"))
-
-;; (add-hook 'xah-fly-command-mode-activate-hook 'my-modeline-color-on)
-;; (add-hook 'xah-fly-insert-mode-activate-hook  'my-modeline-color-off)
-
-;; setup unicode as per this link
-;; http://xahlee.info/emacs/emacs/emacs_set_font_symbol.html
-;; symbola-font and JuliaMono are installed via apt-get
-;; (set-fontset-font t 'symbol
-;;                   (cond
-;;                    ((eq system-type 'windows-nt)
-;;                     (cond
-;;                      ((member "Segoe UI Symbol" (font-family-list)) "Segoe UI Symbol")))
-;;                    ((eq system-type 'darwin)
-;;                     (cond
-;;                      ((member "Apple Symbols" (font-family-list)) "Apple Symbols")))
-;;                    ((eq system-type 'gnu/linux)
-;;                     (cond
-;;                      ((member "Symbola" (font-family-list)) "Symbola")))))
-;;     ;; ((member "JuliaMono" (font-family-list)) "JuliaMono")))))
 
 ;; make aliases per this link https://www.youtube.com/watch?v=ufVldIrUOBg
 (defalias 'pcr 'package-refresh-contents)
@@ -121,14 +54,6 @@
 (defalias 'fsa 'write-file)
 (defalias 'jof 'other-frame)
 (defalias 'jow 'other-window)
-
-
-
-
-;; https://www.emacswiki.org/emacs/Scrolling
-;; page scroll by 30 lines increment
-;; (global-set-key "\M-n"  (lambda () (interactive) (scroll-up   30)) )
-;; (global-set-key "\M-h"  (lambda () (interactive) (scroll-down 30)) )
 
 ;; prettify dired with icons
 (use-package all-the-icons)
@@ -288,20 +213,10 @@
                  :kill-buffer t
                  :jump-to-captured t)))
 
-;; Also check the commands `denote-link-after-creating',
-;; `denote-link-or-create'.  You may want to bind them to keys as well.
 
-;; If you want to have Denote commands available via a right click
-;; context menu, use the following and then enable
-;; `context-menu-mode'.
 (add-hook 'context-menu-functions #'denote-context-menu)
 
 ;; end config denote note-taking
-
-;; doom-modeline
-;; (use-package doom-modeline
-;;   :ensure t
-;;   :hook (after-init . doom-modeline-mode))
 
 ;; note org-superstar.el is placed under lisp dir
 ;; (require 'org-superstar)
@@ -325,11 +240,7 @@
   :bind (:map dired-mode-map ("u" . dired-up-directory))
   :custom(dired-kill-when-opening-new-dired-buffer t)) ; Auto close previous folder buffer
 
-;; https://protesilaos.com/emacs/ef-themes#h:dd9e06f2-eef0-4afe-8a12-b7af5d597108
-;; add ef-themes
-;; Make customisations that affect Emacs faces BEFORE loading a theme
-;; (any change needs a theme re-load to take effect).
-;; (require 'ef-themes)
+
 (use-package ef-themes)
 ;; If you like two specific themes and want to switch between them, you
 ;; can specify them in `ef-themes-to-toggle' and then invoke the command
@@ -356,10 +267,10 @@
 (mapc #'disable-theme custom-enabled-themes)
 
 ;; Load the theme of choice:
-(load-theme 'ef-winter :no-confirm)
+;; (load-theme 'ef-winter :no-confirm)
 
 ;; OR use this to load the theme which also calls `ef-themes-post-load-hook':
-;; (ef-themes-select 'ef-summer)
+(ef-themes-select 'ef-winter)
 
 ;; The themes we provide are recorded in the `ef-themes-dark-themes',
 ;; `ef-themes-light-themes'.
@@ -412,11 +323,14 @@
 (use-package nix-mode
   :mode "\\.nix\\'")
 
-(global-org-modern-mode-enable-in-buffers)
+;(global-org-modern-mode-enable-in-buffers)
 ;; (org-roam-mode)
 
 ;; eat terminal emulator
 (use-package eat
+  :ensure t)
+
+(use-package racket-mode
   :ensure t)
 
 (provide 'purcells-init-local)
