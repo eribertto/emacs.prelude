@@ -4,6 +4,8 @@
 #+identifier: 20240313T150707
 
 * Begin my things to do in this box
+
+* Add first commit in this machine.
 * How to change remote repo to point to my github purcells repo?
 * Install other apps of choice in this box
 * Install anything that comes to mind.
