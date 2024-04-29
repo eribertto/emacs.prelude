@@ -1,4 +1,4 @@
-;;; init-local.el --- Configure default locale -*- lexical-binding: t -*-
+;;; purcells-init-local.el --- Configure default locale -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -9,6 +9,8 @@
 ;;
 (with-eval-after-load 'package
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
+
+(setq inferior-lisp-program "sbcl")
 
 ;; add own personal lisp codes here
 ;; setup frame font including minibuffer and modeline
@@ -417,5 +419,5 @@
 (use-package eat
   :ensure t)
 
-(provide 'init-local)
-;;; init-local.el ends here
+(provide 'purcells-init-local)
+;;; purcells-init-local.el ends here
