@@ -6,13 +6,17 @@
 * Begin my things to do in this box
 
 ** Add open items here:
-*** Make list of Uriel items for Ileco net-metering application.
+*** Try out FG editor an emacs-clone https://devheroes.codes/FG42/FG42
+*** Send balance 23K (add 3k for rose borrow) to sjp bpi re June home budget.
 *** Email CV to Fahad Aljeld re apply in Jafurah project.
-*** Send balance 20K to sjp bpi re June home budget.
 *** Pay riyadbank ccard due 207.61 due date 6/28/24.
 *** Install latest nixos 24.05 in dell precibox laptop.
 *** Readup man/help page and learn axel, readarr, radarr.
+**** https://readarr.com/#downloads-v1-linux
+**** http://localhost:8787/
 *** == separator ==
+*** DONE Make list of Uriel items for Ileco net-metering application and share to him/sjp.
+CLOSED: [2024-06-05 Wed 14:35]
 *** DONE Organize CHED documents in Google drive erimendz.
 CLOSED: [2024-06-05 Wed 12:01]
 *** DONE Reply to job apply invite of Dalma Energy https://dalmaenergy.ae/contact-2/index.htm
