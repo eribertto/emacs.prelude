@@ -599,6 +599,9 @@
 ;; eat terminal emulator
 (use-package eat
   :ensure t)
+;; use cperl-mode
+;; https://www.emacswiki.org/emacs/CPerlMode
+(add-to-list 'major-mode-remap-alist '(perl-mode . cperl-mode))
 
 (provide 'emfy.init)
 ;;; emfy.init.el ends here
