@@ -6,14 +6,21 @@
 * Begin my things to do in this box
 
 ** Add open items here:
-*** Pay riyadbank ccard due 207.61 due date 6/28/24.
-*** Readup man/help page of axel readarr, radarr
-*** Install latest nixos 24.05 in dell precibox laptop.
 *** Make list of Uriel items for Ileco net-metering application.
-*** Check myPH bank SOAs.
+*** Send balance 20K to sjp bpi re June home budget.
+*** Pay riyadbank ccard due 207.61 due date 6/28/24.
+*** Install latest nixos 24.05 in dell precibox laptop.
 *** Msg Joseph/Dennis re UGMP doc requirements
-*** Readup man page shutdown, halt, reboot.
 *** add more here.
+*** Readup man/help page of axel readarr, radarr
+*** DONE Readup man page shutdown, halt, reboot.
+CLOSED: [2024-06-05 Wed 10:47]
+*** DONE Check myPH bank SOAs then update online tracking.
+CLOSED: [2024-06-05 Wed 10:47]
+*** DONE Transfer 35K to Uriel MBT re solar home system payment.
+CLOSED: [2024-06-05 Wed 10:38]
+*** DONE Update Solar payment tracker google sheet.
+CLOSED: [2024-06-05 Wed 10:43]
 ** DONE Install anything that comes to mind.
 CLOSED: [2024-06-05 Wed 10:08]
 ** DONE Install org-super-agenda and setup in this machine.
