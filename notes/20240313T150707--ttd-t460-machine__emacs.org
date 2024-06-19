@@ -1,0 +1,48 @@
+#+title:      TTD T460 machine
+#+date:       [2024-03-13 Wed 15:07]
+#+filetags:   :emacs:
+#+identifier: 20240313T150707
+
+* Begin my things to do in this box
+
+** Add open items here:
+*** Setup nixos 24.05 laptop.
+*** Try out FG editor an emacs-clone https://devheroes.codes/FG42/FG42
+*** Learn more about Flakehub https://flakehub.com/
+*** Send balance 23K (add 3k for rose borrow) to sjp bpi re June home budget.
+*** Email CV to Fahad Aljeld re apply in Jafurah project.
+*** Pay riyadbank ccard due 207.61 due date 6/28/24.
+*** Readup man/help page and learn axel, readarr, radarr.
+**** https://readarr.com/#downloads-v1-linux
+**** http://localhost:8787/
+*** == separator ==
+*** DONE Do DL of beautiful music history in my YT channel, upload to Gdrive.
+CLOSED: [2024-06-06 Thu 08:22]
+*** DONE Install latest nixos 24.05 in dell precibox laptop.
+CLOSED: [2024-06-06 Thu 07:38]
+*** DONE Make list of Uriel items for Ileco net-metering application and share to him/sjp.
+CLOSED: [2024-06-05 Wed 14:35]
+*** DONE Organize CHED documents in Google drive erimendz.
+CLOSED: [2024-06-05 Wed 12:01]
+*** DONE Reply to job apply invite of Dalma Energy https://dalmaenergy.ae/contact-2/index.htm
+CLOSED: [2024-06-05 Wed 12:00]
+*** DONE Msg Joseph/Dennis re UGMP doc requirements
+CLOSED: [2024-06-05 Wed 11:04]
+*** DONE Readup man page shutdown, halt, reboot.
+CLOSED: [2024-06-05 Wed 10:47]
+*** DONE Check myPH bank SOAs then update online tracking.
+CLOSED: [2024-06-05 Wed 10:47]
+*** DONE Transfer 35K to Uriel MBT re solar home system payment.
+CLOSED: [2024-06-05 Wed 10:38]
+*** DONE Update Solar payment tracker google sheet.
+CLOSED: [2024-06-05 Wed 10:43]
+** DONE Install anything that comes to mind.
+CLOSED: [2024-06-05 Wed 10:08]
+** DONE Install org-super-agenda and setup in this machine.
+CLOSED: [2024-06-05 Wed 10:08]
+** DONE Install other apps of choice in this box
+CLOSED: [2024-06-05 Wed 10:08]
+** DONE How to change remote repo to point to my github purcells repo?
+CLOSED: [2024-06-05 Wed 10:08]
+* DONE Setup gh-cli in this box then .gitconfig copy from purcells repo
+CLOSED: [2024-03-13 Wed 16:33]

@@ -1,0 +1,521 @@
+[Home]
+  SiteMap Search ElispArea HowTo Glossary RecentChanges News Problems
+  Suggestions Random
+
+  Search:                 Language:       Go! 
+
+
+  EmacsClient
+
+  EmacsClient allows one to open a file for editing in an already running Emacs.
+  Because it doesn’t start a new Emacs instance at each invocation, you can set
+  up EmacsClient as the default editor, e.g. in the environment variable EDITOR
+  or VISUAL. EmacsClient is part of and works only in conjunction with GNU
+  Emacs. The program GnuClient provides the corresponding functionality for
+  XEmacs, but also works with GnuEmacs.
+
+  Start the Emacs Server
+
+  Starting Interactively
+
+  To enable the Emacs server, add the command 
+
+   (server-start) 
+
+  to your init.el. This is a requirement for using the Emacs client! When the
+  server is running, closing the last Emacs frame will leave the server running.
+  To shut Emacs down completely, call the command `(kill-emacs)’.
+
+  Emacs Daemon
+
+  The command 
+
+ emacs --daemon
+
+  will launch an emacs in daemon mode, starting the server, running the init
+  files and then detaching into the background. This is handy for automatically
+  running at launch. This can save you a few seconds since Emacs will already be
+  running by the time you open your first file! This was not supported on
+  Windows before version 25.
+
+  EmacsAsDaemon details various ways to run this command in different
+  distributions, init scripts vs systemd and so on.
+
+  Using EmacsClient
+
+  Terminal environment
+
+  Simply replace every place you’d run emacs with this command instead.
+
+emacsclient --create-frame --alternate-editor=""
+
+  The emacsclient program will connect to a running instance of Emacs if it
+  exists. -c tells Emacs to open the file in a new frame, which is optional.
+  Specifying -a=”” tells emacsclient to start an instance of emacs if it cannot
+  find one already running.
+
+  To use emacsclient as your editor, add the following to your .bashrc:
+
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -t"                  # $EDITOR opens in terminal
+export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
+
+  If you prefer to launch GUI Emacs from your terminal when editing files,
+  replace the -t in the second line with -c
+
+  Desktop Environment
+
+  You can install a desktop entry for Emacsclient. This will make it available
+  in context menus in Gnome, KDE, XFCE, and other Freedesktop environments.
+  Create a file named emacsclient.desktop in ~/.local/share/applications
+  containing the following:
+
+[Desktop Entry]
+Name=Emacs (Client)
+GenericName=Text Editor
+Comment=Edit text
+MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+Exec=emacsclient -c -a "emacs" %F
+Icon=emacs
+Type=Application
+Terminal=false
+Categories=Development;TextEditor;Utility;
+StartupWMClass=Emacs
+
+  To set emacsclient as the default application for a particular mime type on
+  freedesktop.org based systems such as GNOME & KDE, you can use xdg-mime, e.g:
+  xdg-mime default emacsclient.desktop text/x-python
+
+  Windows
+
+  See EmacsMsWindowsIntegration for a fairly complete and workable solution for
+  Emacs 23/24, using stock Emacs builds. EmacsMsWindowsIntegration contains info
+  on how to set up taskbar/Start-menu shortcuts and make Emacs open particular
+  file types using emacsclient.
+
+  See MsWindowsGlobalContextMenu to add Emacs client to the right click context
+  menu in Explorer.
+
+  WThirtyTwoFileAssociations to see how to associate file extensions to open
+  with Emacs client on Windows.
+
+  ExternalDotExe shows a way to edit text fields in many applications with Emacs
+  client.
+
+  Custom commands and configurations
+
+  Using emacsclient to make a new frame of a remote Emacs 22 on a local display:
+
+    ssh -Y remote_host -f emacsclient --eval '"(make-frame-on-display \"$DISPLAY\")"'
+
+  Edit in a new frame or in the current frame
+
+  Open a new frame from your shell by adding to your .bashrc or .zshrc
+
+   new-frame() {
+      emacsclient -e "(new-frame)"
+   }
+
+  Tiling Window Managers
+
+  See TilingWindowManagers for info about using Emacsclient with tiling WMs.
+
+  Making C-x k end an emacsclient session
+
+  If your fingers are wired to using C-x k to kill off buffers (and you dont
+  like having to type C-x #) then try this :
+
+  (add-hook 'server-switch-hook
+            (lambda ()
+              (when (current-local-map)
+                (use-local-map (copy-keymap (current-local-map))))
+	      (when server-buffer-clients
+		(local-set-key (kbd "C-x k") 'server-edit))))
+
+  Functionality similar to kill-emacs-query-functions for clients
+
+  ‘kill-emacs-query-functions’ allows one to call functions that query the user
+  about killing emacs, with the potential for aborting the quit. i have a simple
+  check in my .emacs that works fine for a standalone emacs process but doesn’t
+  get called when exiting an emacs client.
+
+ (setq kill-emacs-query-functions
+      (cons (lambda () (yes-or-no-p "Really kill Emacs? "))
+            kill-emacs-query-functions))
+
+  Using Emacsclient with Gnu Screen
+
+  See here: GnuScreen
+
+  Opening Server Files Always in a New Frame
+
+  To open the files designated by emacsclient in their own frame, you can use
+  the following hook as a Server Switch Hook which can be set up in
+  customize-group <RET> Server <RET>, or in your InitFile, as such:
+
+    (add-hook 'server-switch-hook
+              (lambda nil
+                (let ((server-buf (current-buffer)))
+                  (bury-buffer)
+                  (switch-to-buffer-other-frame server-buf))))
+
+  If you’re setting this up via M-x customize, you’ll of course want to drop the
+  (add-hook) call.
+
+  You might also want to close the frame when you’re done with it. To do this,
+  set up a Server Done Hook in the same section to call delete-frame.
+
+    (add-hook 'server-done-hook 'delete-frame)
+
+  I also like emacs to cleanup stuff when I finish the emacsclient, so I add
+  another hook to kill the buffer when finished. This also takes care of weird
+  buffer switching behaviors when closing client buffers.
+
+    (add-hook 'server-done-hook (lambda nil (kill-buffer nil)))
+
+  The whole thing is actually in my .emacs-custom file:
+
+  (custom-set-variables
+   '(server-done-hook (quote ((lambda nil (kill-buffer nil)) delete-frame)))
+   '(server-switch-hook (quote ((lambda nil (let (server-buf) (setq server-buf (current-buffer)) (bury-buffer)      (switch-to-buffer-other-frame server-buf))))))
+   )
+
+  --TheAnarcat
+
+  You can also use ‘server-kill-new-buffers’ instead of calling ‘kill-buffer’ in
+  your ‘server-done-hook’, e.g.
+
+    (custom-set-variables '(server-kill-new-buffers t))
+    (add-hook 'server-done-hook (lambda () (delete-frame)))
+
+  --RyanBarrett
+
+  Setting Up emacsclient to Run Emacs Only on X11
+
+  I’ve found it very useful to set my $EDITOR to emacsclient, and let it judge
+  wether or not to start emacs, based on the $DISPLAY variable, which is often
+  an indication of running on a faster machine for me. So I’ve wrote the
+  following script, and installed it as /usr/bin/emacsclient.vim.
+
+#! /bin/sh
+
+files="$@"
+files=${files:-/dev/zero}
+
+if [ -z "$DISPLAY" ]; then
+  exec emacsclient.emacs21 -a vim "$files"
+else
+  exec emacsclient.emacs21 -a emacs "$files"
+fi
+
+  Note that I avoided calling directly emacsclient, which might be an
+  alternative that points to emacsclient.vim, which would lead to an horrible
+  recursion.
+
+  To complete the setup on Debian, I’ve installed this script as an alternative
+  to the editor command:
+
+update-alternatives --install /usr/bin/editor editor /usr/bin/emacsclient.vim 50
+
+  Now I can choose emacsclient.vim as my editor using:
+
+update-alternatives --config editor
+
+  --TheAnarcat
+
+  Piping stdout to an Emacs buffer using emacsclient
+
+  See EmacsPipe.
+
+  Nifty shell function for hassle-free starting of emacsclient
+
+  This is aimed at users that use GUI.
+
+  * It creates a new frame if it doesn’t exist or opens the given file in the
+    existing frame.
+  * The function has a built-in EmacsPipe functionality (e.g. echo "foo" | em -
+    ).
+  * Both GUI and TUI instances can be created without issues. For TUI just use -
+    nw, -t or --tty switch like you would normally.
+
+em()
+{
+    args=""
+    nw=false
+    # check if emacsclient is already running
+    if pgrep -U $(id -u) emacsclient > /dev/null; then running=true; fi
+
+    # check if the user wants TUI mode
+    for arg in "$@"; do
+    	if [ "$arg" = "-nw" ] || [ "$arg" = "-t" ] || [ "$arg" = "--tty" ]
+	then
+    	    nw=true
+    	fi
+    done
+
+    # if called without arguments - open a new gui instance
+    if [ "$#" -eq "0" ] || [ "$running" != true ]; then
+	args=(-c $args) 		# open emacsclient in a new window
+    fi
+    if [ "$#" -gt "0" ]; then
+	# if 'em -' open standard input (e.g. pipe)
+	if [[ "$1" == "-" ]]; then
+    	    TMP="$(mktemp /tmp/emacsstdin-XXX)"
+    	    cat >$TMP
+	    args=($args --eval '(let ((b (generate-new-buffer "*stdin*"))) (switch-to-buffer b) (insert-file-contents "'${TMP}'") (delete-file "'${TMP}'"))')
+	else
+	    args=($@ $args)
+	fi
+    fi
+
+    # emacsclient $args
+    if $nw; then
+	emacsclient "${args[@]}"
+    else
+	(nohup emacsclient "${args[@]}" > /dev/null 2>&1 &) > /dev/null
+    fi
+}
+
+  – lampilelo
+
+  Setting frame colors differently for graphical clients and console clients
+
+  See: SettingFrameColorsForEmacsClient
+
+  – GeoffreyTeale
+
+  Color coding (multiple) emacs server instances
+
+  You can start different emacs server instances w/ different color schemes (so
+  you instantly know which one your using).
+
+  This works to set the background color:
+
+emacs --daemon=todo --background-color='#93DB80'
+emacs --daemon=edit --background-color=yellow
+
+  But if you try setting the cursor color – it fails miserably.
+
+  Another, more flexible option:
+
+  starting emacs server (daemon)
+
+  Example scripts for starting different instances of emacs server: 
+
+#!/bin/bash
+
+export ESRVNAME=todo
+emacs --daemon=$ESRVNAME
+
+  or 
+
+#!/bin/bash
+
+export ESRVNAME=edit
+emacs --daemon=$ESRVNAME
+ps -ef | grep -i 'emacs --daemon'
+
+  Also see
+  http://www.gnu.org/s/libtool/manual/emacs/Emacs-Server.html#Emacs-Server
+
+  set color choices in .emacs
+
+  Set your color choices in your .emacs file: 
+
+;; set colors for my emacs server instances
+(when (string-match "todo" server-name)
+  (setq default-frame-alist
+        (append default-frame-alist
+                '((background-color . "#93DB80")
+                  (cursor-color . "yellow")
+                  )))
+  ;; or set a color-theme, e.g., (color-theme-classic)
+  )
+(when (string-match "edit" server-name)
+  (setq default-frame-alist
+        (append default-frame-alist
+                '((background-color . "yellow")
+                  ;; (foreground-color . "black")
+                  (cursor-color . "blue")
+                  )))
+  )
+
+  starting emacsclient
+
+  An example script for starting emacsclient (for different instances of emacs
+  server): 
+
+#!/bin/bash
+
+emacsclient -server-file edit -c "$@"
+
+  This allows you to pass any parameters to emacsclient, e.g., filenames, or
+  even the ‘-t’ (or ‘-nw’) option (it will override the ‘-c’)
+
+  Another example: 
+
+#!/bin/bash
+
+umask 0007 # you can set a different umask than your default for emcas session
+cd ~/docs/todo/
+emacsclient -server-file todo -c ~/docs/todo/work.org &
+
+  Also see:
+  http://www.gnu.org/s/libtool/manual/emacs/emacsclient-Options.html#emacsclient-Options
+  
+
+  Web Browser Plugins
+
+  The Emacs server can be used to edit text fields in web browsers using
+  plugins.
+
+  Extension for webextension-compatible browsers: Edit with Emacs
+
+  Edit with Emacs is an extension for webextension-compatible browsers such as
+  GNU Icecat, Mozilla Firefox and Chromium-based browsers. This extension allows
+  users to edit web-page TEXTAREAs with Emacs. It’s nice to use Emacs when
+  typing in posts or editing Wiki pages. It uses its own edit-server.el instead
+  of emacsclient or gnuclient currently, and doesn’t let you edit page source
+  yet. (This is not strictly about emacsclient, but seems related.)
+
+  Discontinued Firefox extensions
+
+  It's All Text and MozEx cannot be found on the Firefox add-ons store and seem
+  to have been discontinued.
+
+  Troubleshooting
+
+  “No connection could be made because the target machine actively refused it”
+
+  The #1 problem people face is a stale or outdated server file. Just rm ~
+  /.emacs.d/server/* and your problem is usually solved.
+
+  workaround for emacsclient "can't find socket" error on cocoa/ns build (OS X)
+  via ssh
+
+  I find that after starting emacs server (eg,
+  /Applications/Emacs.app/Contents/MacOS/Emacs --daemon) I can start a client
+  session locally, but emacsclient can’t find the socket if I try to create a
+  terminal-only client via ssh (OS X 10.6.2, GNU Emacs 23.1.90.1 compiled with .
+  /configure --with-ns). I’ve seen this reported as a bug (bug#3992: 23.1.50) on
+  bug-gnu-emacs-gnu. Here’s a workaround.
+
+  First, you need to make sure that you’re using the right emacsclient binary.
+  Apple distributes GNU Emacs 22 (installed in /usr/bin), but its emacsclient
+  binary is not compatible with GNU Emacs 23.
+
+alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+
+  Then, you need to set the server-socket-dir variable in your .emacs so that
+  the standard path assumed by emacsclient is used instead of the path that
+  Emacs 23 defaults to on MacOS X.
+
+(setq server-socket-dir (format "/tmp/emacs%d" (user-uid)))
+
+  Obviously, this needs to be executed before (server-start) is called.
+
+  Now you can attach to the server process using the above alias in terminal
+  mode via an ssh session:
+
+ emacsclient -nw
+
+  And it also works locally to launch the cocoa GUI:
+
+ emacsclient -c &
+
+  I expect that this will fail if you are running multiple servers.
+
+  KDE
+
+  In KDE, you can set File Associations to open in emacsclient instead of
+  KWrite.
+
+  Socket forwarding with OpenSSH
+
+  The OpenSSH implementation of the ssh client and server can forward Unix
+  sockets. It’s possible to use this to connect to a remote Emacs server.
+
+local$ ssh -R /tmp/emacs-server:/tmp/emacs$UID/server remote
+remote$ mkdir /tmp/emacs$UID
+remote$ mv /tmp/emacs-server /tmp/emacs$UID/server
+remote$ export EDITOR="emacsclient --tramp=/ssh:remote:"
+
+  Convenient wrappers around emacsclient
+
+  All my personal aliases and scripts start with a comma. <COMMA>-<TAB> in the
+  shell gives a complete list. These convenience-wrappers are especially handy
+  with a tiling window managers, such as i3.
+
+  ,ecn: Loads one or several files into Emacs, opens a separate frame for each
+  file. Returns immediatelly. This is what I use when I want to open a file in a
+  fresh Emacs frame.
+
+$ cat `which ,ecn`
+#!/bin/sh
+
+for filename in "$@"; do
+    emacsclient -n -c "$filename"
+done
+
+  ,ec: Loads one or several files into Emacs, opens a separate frame for each
+  file. Does not return until the user closes the frame with C-x #. My
+  environment variable $VISUAL is set to ,ec. The main use is editing commit
+  messages.
+
+$ cat `which ,ec`
+#!/bin/sh
+
+for filename in "$@"; do
+    emacsclient -c "$filename"
+done
+
+  ,es: Loads one or several files into Emacs, opens no frames. Returns
+  immediatelly. Once the file(s) is/are loaded, once can reuse an existing Emacs
+  frame to select the appropriate buffer or press <F12> to open the buffer of
+  the last file loaded by ,es. For this to work it is necessary to add the
+  following lines to .emacs:
+
+(defun load-last-file ()
+  "Load file from variable _lastfile_ set by ,es script."
+  (interactive)
+  (find-file _lastfile_))
+(global-set-key (kbd "<f12>") 'load-last-file)
+$ cat `which ,es`
+#!/usr/bin/env perl
+
+sub to_emacs_string
+{
+  s/\\/\\\\/g;
+  s/"/\\"/g;
+
+  return qq{"$_"};
+}
+
+$lst = join " ", map(to_emacs_string, @ARGV);
+
+$_ = `readlink -f $ARGV[-1]`;
+chomp;
+$f = to_emacs_string;
+
+exec "emacsclient", "-e", "(progn (setq _lastfile_ $f) (setq lst '($lst)) (while lst (find-file-noselect (car lst)) (setq lst (cdr lst))))";
+--------------------------------------------------------------------------------
+
+  CategoryExternalUtilities
+
+--------------------------------------------------------------------------------
+
+  日本語 Add Translation
+  Talk Edit this page View other revisions Administration
+  Last edited 2022-06-10 12:59 UTC by JoeBloggs (diff)
+CC-GNU GPL
+
+  This work is licensed to you under version 2 of the GNU General Public
+  License. Alternatively, you may choose to receive this work under any other
+  license that grants the right to use, copy, modify, and/or distribute the
+  work, as long as that license imposes the restriction that derivative works
+  have to grant the same rights and impose the same restriction. For example,
+  you may choose to receive this work under the GNU Free Documentation License,
+  the CreativeCommons ShareAlike License, the XEmacs manual license, or similar
+  licenses. 
+
+  Please note our Privacy Statement.
