@@ -5,6 +5,13 @@
 ;;; Emfy 0.3.0 <https://github.com/susam/emfy>
 ;;; edited by user me April 13, 2024
 
+;; start the initial frame maximized
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+;; start every frame maximized
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+
 (require 'desktop)
 (desktop-save-mode 1)
 (defun my-desktop-save ()
