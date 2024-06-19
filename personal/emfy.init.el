@@ -1,9 +1,9 @@
+;;; use emfy as init file guide
 ;;; emfy.init.el --- Configure default init file -*- lexical-binding: t -*-
-;;; Commentary: see Emfy below
 ;;; Code:
 
-;;; Emfy 0.3.0 <https://github.com/susam/emfy>
-;;; edited by user me April 13, 2024
+
+
 
 ;; start the initial frame maximized
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
@@ -22,6 +22,7 @@
   )
 (add-hook 'auto-save-hook 'my-desktop-save)
 
+(server-start) ;; enable server mode.
 
 ;; Customize user interface.
 (when (display-graphic-p)
@@ -84,7 +85,9 @@
   (package-refresh-contents))
 
 ;; Install packages.
+
 (dolist (package '(markdown-mode racket-mode deadgrep nix-mode w3m ef-themes dired-sidebar denote paredit rainbow-delimiters xah-fly-keys popper all-the-icons all-the-icons-dired all-the-icons-completion marginalia sly sly-asdf sly-quicklisp eat eglot savehist vertico orderless corfu magit org-superstar))
+
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -151,6 +154,7 @@
   (xah-fly-keys 1))
 
 (global-set-key (kbd "<f5>") 'xah-fly-mode-toggle) ; this works
+
 
 (use-package racket-mode
   :ensure t)
@@ -297,10 +301,12 @@
 (mapc #'disable-theme custom-enabled-themes)
 
 ;; Load the theme of choice:
-;; (load-theme 'ef-cherie :no-confirm)
+
+(load-theme 'ef-winter :no-confirm)
 
 ;; OR use this to load the theme which also calls `ef-themes-post-load-hook':
-(ef-themes-select 'ef-cherie)
+;; (ef-themes-select 'ef-summer)
+
 
 ;; The themes we provide are recorded in the `ef-themes-dark-themes',
 ;; `ef-themes-light-themes'.
@@ -367,6 +373,7 @@
                                    (server-start))))
 
 
+
 ;; sly/slime sbcl section
 ;; install sly https://github.com/joaotavora/sly
 ;; https://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
@@ -385,6 +392,20 @@
 ;; (require 'sly-autoloads)
 ;; (setq sly-contribs '(sly-asdf sly-quicklisp))
 
+
+
+=======
+(add-to-list 'exec-path "/usr/bin")
+(setq inferior-lisp-program "sbcl")
+
+;; install sly https://github.com/joaotavora/sly
+;; https://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
+
+(use-package sly
+  :ensure t)
+
+(eval-after-load 'sly
+  `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
 
 
 ;; Enable vertico
@@ -603,6 +624,7 @@
 (all-the-icons-completion-mode)
 (add-hook 'marginalia-mode-hook #'all-the-icons-completion-marginalia-setup)
 
+
 ;; eat terminal emulator
 (use-package eat
   :ensure t)
@@ -612,3 +634,4 @@
 
 (provide 'emfy.init)
 ;;; emfy.init.el ends here
+
