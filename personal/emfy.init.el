@@ -2,15 +2,11 @@
 ;;; emfy.init.el --- Configure default init file -*- lexical-binding: t -*-
 ;;; Code:
 
-
-
-
 ;; start the initial frame maximized
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 ;; start every frame maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
 
 (require 'desktop)
 (desktop-save-mode 1)
@@ -30,7 +26,6 @@
   (scroll-bar-mode 1))
 (setq inhibit-startup-screen t)
 (column-number-mode)
-
 
 ;; Show stray whitespace.
 (setq-default show-trailing-whitespace t)
@@ -154,7 +149,6 @@
   (xah-fly-keys 1))
 
 (global-set-key (kbd "<f5>") 'xah-fly-mode-toggle) ; this works
-
 
 (use-package racket-mode
   :ensure t)
@@ -307,7 +301,6 @@
 ;; OR use this to load the theme which also calls `ef-themes-post-load-hook':
 ;; (ef-themes-select 'ef-summer)
 
-
 ;; The themes we provide are recorded in the `ef-themes-dark-themes',
 ;; `ef-themes-light-themes'.
 ;; We also provide these commands, but do not assign them to any key:
@@ -372,8 +365,6 @@
                                (or (server-running-p)
                                    (server-start))))
 
-
-
 ;; sly/slime sbcl section
 ;; install sly https://github.com/joaotavora/sly
 ;; https://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
@@ -392,8 +383,6 @@
 ;; (require 'sly-autoloads)
 ;; (setq sly-contribs '(sly-asdf sly-quicklisp))
 
-
-
 =======
 (add-to-list 'exec-path "/usr/bin")
 (setq inferior-lisp-program "sbcl")
@@ -406,7 +395,6 @@
 
 (eval-after-load 'sly
   `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
-
 
 ;; Enable vertico
 (use-package vertico
@@ -528,8 +516,6 @@
   ;; setting is useful beyond Corfu.
   (setq read-extended-command-predicate #'command-completion-default-include-p))
 
-
-
 ;; begin config denote note-taking
 (use-package denote
   :init
@@ -624,7 +610,6 @@
 (all-the-icons-completion-mode)
 (add-hook 'marginalia-mode-hook #'all-the-icons-completion-marginalia-setup)
 
-
 ;; eat terminal emulator
 (use-package eat
   :ensure t)
@@ -634,4 +619,3 @@
 
 (provide 'emfy.init)
 ;;; emfy.init.el ends here
-
