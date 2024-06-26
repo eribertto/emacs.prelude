@@ -1,0 +1,53 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	editor = emacs
+	pager = less
+[remote "origin"]
+	url = https://github.com/eribertto/emacs.prelude.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "t460p.dev.box"]
+	pushRemote = origin
+	remote = origin
+	merge = refs/heads/t460p.dev.box
+[branch "june19.2024"]
+	remote = origin
+	merge = refs/heads/june19.2024
+[push]
+	autoSetupRemote = true
+	followTags = true
+[init]
+	defaultBranch = main
+[merge]
+	conflictStyle = zdiff3
+	tool = meld
+[rebase]
+	autoSquash = true
+	autoStash = true
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+[help]
+	autoCorrect = 10
+[diff]
+	algorithm = histogram
+	tool = meld
+	colorMoved = default
+	context = 10
+[transfer]
+	fsckObjects = true
+[fetch]
+	fsckobjects = true
+	prune = true
+[receive]
+	fsckObjects = true
+[branch]
+	sort = -committerdate
+[log]
+	date = iso
