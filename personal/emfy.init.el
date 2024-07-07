@@ -682,7 +682,10 @@
 
         ;; *** PerlySense End ***
 
-
+;; (require 'perlbrew)
+(use-package perlbrew
+  :ensure t)
+(perlbrew-switch "perl-blead") ;; initialize perl version to use
 
 (provide 'emfy.init)
 ;;; emfy.init.el ends here
