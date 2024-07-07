@@ -274,7 +274,7 @@
 ;; can specify them in `ef-themes-to-toggle' and then invoke the command
 ;; `ef-themes-toggle'.  All the themes are included in the variable
 ;; `ef-themes-collection'.
-(setq ef-themes-to-toggle '(ef-summer ef-winter))
+(setq ef-themes-to-toggle '(ef-rosa ef-winter))
 
 (setq ef-themes-headings ; read the manual's entry or the doc string
       '((0 variable-pitch light 1.9)
@@ -296,7 +296,7 @@
 
 ;; Load the theme of choice:
 
-(load-theme 'ef-winter :no-confirm)
+(load-theme 'ef-dark :no-confirm)
 
 ;; OR use this to load the theme which also calls `ef-themes-post-load-hook':
 ;; (ef-themes-select 'ef-summer)
@@ -616,6 +616,73 @@
 ;; use cperl-mode
 ;; https://www.emacswiki.org/emacs/CPerlMode
 (add-to-list 'major-mode-remap-alist '(perl-mode . cperl-mode))
+
+;; *** PerlySense Config ***
+;; see https://metacpan.org/pod/Devel::PerlySense
+        ;; ** PerlySense **
+        ;; The PerlySense prefix key (unset only if needed, like for \C-o)
+        (global-unset-key "\C-o")
+        (setq ps/key-prefix "\C-o")
+
+
+        ;; ** Flymake **
+        ;; Load flymake if t
+        ;; Flymake must be installed.
+        ;; It is included in Emacs 22
+        ;;     (or http://flymake.sourceforge.net/, put flymake.el in your load-path)
+        (setq ps/load-flymake t)
+        ;; Note: more flymake config below, after loading PerlySense
+
+
+        ;; *** PerlySense load (don't touch) ***
+        (setq ps/external-dir (shell-command-to-string "perly_sense external_dir"))
+        (if (string-match "Devel.PerlySense.external" ps/external-dir)
+            (progn
+              (message
+               "PerlySense elisp files  at (%s) according to perly_sense, loading..."
+               ps/external-dir)
+              (setq load-path (cons
+                               (expand-file-name
+                                (format "%s/%s" ps/external-dir "emacs")
+                                ) load-path))
+              (load "perly-sense")
+              )
+          (message "Could not identify PerlySense install dir.
+        Is Devel::PerlySense installed properly?
+        Does 'perly_sense external_dir' give you a proper directory? (%s)" ps/external-dir)
+          )
+
+
+        ;; ** Flymake Config **
+        ;; If you only want syntax check whenever you save, not continously
+        (setq flymake-no-changes-timeout 9999)
+        (setq flymake-start-syntax-check-on-newline nil)
+
+        ;; ** Code Coverage Visualization **
+        ;; If you have a Devel::CoverX::Covered database handy and want to
+        ;; display the sub coverage in the source, set this to t
+        (setq ps/enable-test-coverage-visualization nil)
+
+        ;; ** Color Config **
+        ;; Emacs named colors: http://www.geocities.com/kensanata/colors.html
+        ;; The following colors work fine with a white X11
+        ;; background. They may not look that great on a console with the
+        ;; default color scheme.
+        (set-face-background 'flymake-errline "antique white")
+        (set-face-background 'flymake-warnline "lavender")
+        (set-face-background 'dropdown-list-face "lightgrey")
+        (set-face-background 'dropdown-list-selection-face "grey")
+
+
+        ;; ** Misc Config **
+
+        ;; Run calls to perly_sense as a prepared shell command. Experimental
+        ;; optimization, please try it out.
+        (setq ps/use-prepare-shell-command t)
+
+        ;; *** PerlySense End ***
+
+
 
 (provide 'emfy.init)
 ;;; emfy.init.el ends here
