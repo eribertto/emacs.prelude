@@ -519,7 +519,7 @@
 ;; begin config denote note-taking
 (use-package denote
   :init
-  (add-hook 'find-file-hook #'denote-link-buttonize-buffer)
+  ;(add-hook 'find-file-hook #'denote-link-buttonize-buffer)
   (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
   ;; Remember to check the doc strings of those variables.
   (setq denote-directory (expand-file-name "~/.emacs.d/notes"))
