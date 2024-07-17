@@ -1,0 +1,32 @@
+July 16, 2024
+- Playing around with MX Linux 23.3 KDE live iso
+- The distro can install NVIDIA driver for the Dell Precision machine
+- There is one MX repo in Cebu, Philippines! Wow!
+- There is pop up notifier to remind you of system updates. I click ok to apply the updates (DONE).
+- Let us see if the applied tweaks will be carried over during the installation process.
+- Can MX detect and setup the printer? Yes, when plugged via USB port. But driver is drvless.ppd. Note: when hplip driver is selected the print page output is the same as the usb-plugged option.
+- installation time to bare metal ~5 minutes. Disk selected is /dev/nvme0n1 (was zaneyos, deleted.)
+- Hit reboot (unplugged Ventoy usb drive).
+- Yes success logged in to KDE DE as eriberttom/BHU890__++.
+- Time is setup correctly. Wifi is applied exactly like in live iso.
+- NVIDIA driver applied already like in live iso.
+- Installed various apps and utilities of choice plus latest kernel version 6.6 in Mx Package installer.
+- Installed Perl modules
+-- https://metacpan.org/pod/local::lib
+-- https://metacpan.org/pod/Perl::LanguageServer
+-- https://metacpan.org/pod/Devel::PerlySense
+-- https://metacpan.org/pod/App::cpanminus (install to local Perl with perlbrew)
+- Additional apps installed:
+-- gh (plus setup dot gitconfig and gitignore_global)
+-- rustup (for rust cli apps e.g. starship, lsd, nushell, dust, etc)
+-- (todo) nerdfonts with KDE Discover
+-- (todo) nix manager from Determinate systems
+-- taskwarrior for cli todos
+-- emacs latest (use nix or distrobox with arch linux as base image)
+-- apps manager from Rhino Linux pacstall.dev
+-- setup dot bashrc, bash_aliases
+- Plan to have this mini pc https://www.bee-link.com/products/beelink-ser5-max-5800h
+- installed yt-dlp, taskwarrior
+- also done swapping Cpsk with Ctrl keys
+- (todo) setup Perl language server in Kate, Emacs (when installed).
+- (todo) apply good theme for starship pretty-prompt.
